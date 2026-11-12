@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><meta name="description" content="数智研临床医生端业务机会与进入决策工作台：需求、支付、竞争、证据与90天试点。"><title>数智研 · 临床医生端业务决策工作台</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><meta property="og:image" content="favicon.svg"><style>:root{--paper:#faf9f6;--surface:#fff;--nav:#f0efeb;--ink:#292824;--muted:#716e66;--line:#e3e0d8;--accent:#b75b3f;--accent-soft:#f4e8e0;--green:#37665a;--green-soft:#eaf1ed;--blue:#526b88;--purple:#76647d;--shadow:0 10px 34px #30281912;--sans:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',system-ui,sans-serif;--serif:'Songti SC','STSong','Noto Serif CJK SC',Georgia,serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.65 var(--sans)}button,input,select,textarea{font:inherit;color:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button{border:0;background:none}a{color:var(--accent);text-underline-offset:3px}a:hover{color:#80402b}button:hover{filter:brightness(.97)}:focus-visible{outline:3px solid #b75b3f88;outline-offset:3px}svg{width:19px;height:19px;flex:none;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.hidden,[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}h1,h2,h3,p{margin-top:0}h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:.3px;line-height:1.3;margin-bottom:9px}h2{font-size:20px;line-height:1.4;font-weight:600;margin-bottom:14px}h3{font-size:16px;line-height:1.55;font-weight:600;margin-bottom:9px}p{margin-bottom:13px}.muted{color:var(--muted)}.small{font-size:12px}.mono{font-variant-numeric:tabular-nums}.app{display:flex;min-height:100vh}.sidebar{width:234px;position:fixed;inset:0 auto 0 0;background:var(--nav);border-right:1px solid var(--line);display:flex;flex-direction:column;padding:30px 16px 19px;z-index:40}.brand{display:flex;align-items:center;gap:10px;padding:0 14px 25px;font-weight:650;font-size:18px;letter-spacing:1px}.brand-mark{width:27px;height:27px;background:var(--accent);border-radius:7px;color:white;display:grid;place-items:center}.brand-mark svg{width:21px;height:21px}.workspace-label{padding:0 14px 25px;font-size:12px;color:var(--muted)}.nav-group{display:grid;gap:6px}.nav-item{display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:8px;text-align:left;font-weight:500;font-size:14px;width:100%;color:#646159}.nav-item svg{width:18px;height:18px}.nav-item.active{background:#e4e1d9;color:var(--ink);font-weight:600}.nav-item:not(.active):hover{background:#e9e7e1}.nav-count{margin-left:auto;font-size:11px;background:#f8f7f3;border-radius:5px;padding:0 6px;line-height:21px;color:var(--muted)}.sidebar-foot{margin-top:auto;padding:28px 14px 0}.sidebar-foot p{font-size:11px;line-height:1.8;color:var(--muted);margin-bottom:8px}.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:7px}.main{margin-left:234px;width:calc(100% - 234px);min-width:0}.topbar{height:67px;display:flex;align-items:center;justify-content:space-between;padding:0 39px;border-bottom:1px solid var(--line);background:#faf9f6f2;position:sticky;top:0;z-index:20;gap:16px;backdrop-filter:blur(14px)}.crumb{font-size:12px;color:var(--muted);display:flex;gap:12px;align-items:center}.crumb b{font-weight:500;color:var(--ink)}.top-actions{display:flex;gap:8px}.btn{display:inline-flex;gap:7px;align-items:center;justify-content:center;padding:8px 13px;border:1px solid var(--line);background:var(--surface);border-radius:7px;line-height:1.5;font-size:12px;font-weight:500;white-space:nowrap}.btn svg{width:15px;height:15px}.btn.primary{background:var(--ink);border-color:var(--ink);color:#fff}.btn.accent{color:var(--accent);background:var(--accent-soft);border-color:#e4c5b7}.btn.ghost{background:transparent;border-color:transparent}.icon-button{width:34px;height:34px;border-radius:7px;display:grid;place-items:center}.icon-button:hover{background:var(--nav)}.content{max-width:1580px;margin:auto;padding:34px 39px 100px}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:25px;margin-bottom:24px}.page-head p{color:var(--muted);max-width:780px;font-size:13px;line-height:1.9;margin-bottom:0}.page-tag{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:4px 10px;white-space:nowrap;color:var(--muted);margin-top:8px}.intro-bar{display:flex;gap:25px;align-items:center;justify-content:space-between;border-left:3px solid var(--accent);background:#f2efe8;padding:16px 19px;margin-bottom:24px;border-radius:0 8px 8px 0}.intro-bar strong{font-size:14px;font-weight:600}.intro-bar p{font-size:12px;color:var(--muted);margin:5px 0 0;line-height:1.8}.tabbar{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:18px}.tab{padding:8px 14px;border-radius:7px;white-space:nowrap;border:1px solid transparent;font-size:13px;color:var(--muted)}.tab.active{background:var(--ink);color:white}.tab.market:not(.active){background:var(--accent-soft);color:#975139}.tab:not(.active):hover{background:var(--nav)}.filters{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;padding:17px 18px;border:1px solid var(--line);border-radius:9px;background:#fff;margin-bottom:17px}.field{display:flex;flex-direction:column;gap:5px}.field>label{font-size:11px;color:var(--muted)}.searchfield{flex:1;min-width:210px}.searchwrap{position:relative}.searchwrap svg{position:absolute;left:11px;top:10px;width:16px;height:16px;color:var(--muted)}.searchwrap input{padding-left:35px;width:100%}input,select,textarea{border:1px solid var(--line);border-radius:6px;background:#fbfaf8;padding:8px 10px;font-size:12px;line-height:1.5}select{min-width:128px;max-width:190px;height:37px}.searchwrap input{height:37px}.resetbtn{height:37px;font-size:12px;color:var(--muted);padding:0 7px}.resultbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px;font-size:12px;color:var(--muted)}.resultbar b{color:var(--ink);font-weight:600}.view-toggle{display:flex;gap:2px;background:#ece9e2;border-radius:6px;padding:3px}.view-toggle button{display:flex;align-items:center;gap:5px;font-size:11px;padding:5px 8px;border-radius:4px;color:var(--muted)}.view-toggle button.active{background:white;color:var(--ink)}.view-toggle svg{width:13px;height:13px}.map-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}.map-board.single{grid-template-columns:minmax(0,1fr)}.map-board.single .lane-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.lane{min-width:0}.lane-heading{border-top:2px solid var(--lane-color);padding:12px 1px 13px;margin-bottom:1px}.lane-heading h2{font-size:14px;display:flex;align-items:center;gap:7px;margin:0 0 5px}.lane-heading svg{width:16px;height:16px;color:var(--lane-color)}.lane-heading small{display:block;color:var(--muted);font-size:11px;line-height:1.6;min-height:35px}.lane-count{margin-left:auto;font-size:11px;font-weight:400;color:var(--muted)}.product-card{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:15px 15px 12px;margin-bottom:12px;transition:border-color .12s;position:relative}.product-card:hover{border-color:#bcb6ab}.product-card.proposal{background:#fbf6f0;border-color:#e4d2c4}.product-card.selected{outline:2px solid var(--accent);outline-offset:-1px}.card-top{display:flex;align-items:center;gap:7px;font-size:11px;margin-bottom:10px;color:var(--muted)}.card-top .select-product{margin-left:auto}.brandname{font-weight:600;color:var(--ink);overflow-wrap:anywhere}.select-product{width:23px;height:23px;border:1px solid var(--line);border-radius:5px;display:grid;place-items:center;color:var(--muted);background:white;flex-shrink:0}.select-product svg{width:13px;height:13px}.select-product[aria-pressed=true]{color:#fff;background:var(--accent);border-color:var(--accent)}.product-title{font-weight:600;font-size:14px;line-height:1.65;text-align:left;padding:0;display:block;margin-bottom:7px;overflow-wrap:anywhere;width:100%}.product-title:hover{color:var(--accent)}.product-card p{font-size:12px;line-height:1.85;color:var(--muted);margin-bottom:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:4px;font-size:10px;padding:2px 6px;line-height:1.6;color:var(--muted);background:#faf9f6;white-space:nowrap}.pill.proposal{background:#f6e8db;color:#995032;border-color:#e9cdb7}.pill.verified{background:var(--green-soft);color:var(--green);border-color:#d4e2d8}.pill.pending{background:#f3eee3;color:#8a6a3b;border-color:#e9ddc4}.card-meta{display:flex;gap:5px;flex-wrap:wrap}.card-bottom{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;font-size:10px;color:var(--muted);gap:4px}.detail-link{font-size:11px;color:var(--accent);padding:0}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:8px;background:white}.data-table{border-collapse:collapse;width:100%;font-size:12px;min-width:780px}.data-table th{font-weight:500;color:var(--muted);text-align:left;background:#f2f0eb;padding:13px 14px;white-space:nowrap}.data-table td{padding:15px 14px;border-top:1px solid var(--line);vertical-align:top;line-height:1.8}.data-table tbody tr:hover{background:#fcfaf6}.data-table .product-title{font-size:12px;margin:0}.empty{background:#fff;border:1px dashed #cfc9be;border-radius:9px;padding:55px 20px;text-align:center;grid-column:1/-1}.empty h3{font-size:17px}.empty p{color:var(--muted)}.footnote{font-size:11px;color:var(--muted);line-height:1.9;margin-top:22px;max-width:960px}.compare-tray{position:fixed;bottom:20px;left:calc(234px + 39px);right:39px;background:#292824;color:white;display:flex;align-items:center;gap:12px;padding:13px 17px;border-radius:10px;box-shadow:0 10px 35px #29282433;z-index:30;max-width:1440px;margin:auto}.compare-tray p{margin:0;font-size:12px;flex:1}.compare-tray .tray-names{font-size:11px;color:#cecac1;display:block;max-width:820px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.compare-tray .btn{border-color:#615f59;background:#45443f;color:#fff}.compare-tray .btn.primary{background:#f5f2ea;color:var(--ink);border-color:#f5f2ea}.compare-tray .icon-button{color:#dedbd4}.menu-btn{display:none}.notice{padding:13px 16px;background:#f3f0e9;border-radius:7px;font-size:12px;line-height:1.9;margin-bottom:20px;color:#696052}.notice strong{color:#514838}.dialog{border:1px solid var(--line);padding:0;color:var(--ink);box-shadow:var(--shadow);background:var(--paper)}.dialog::backdrop{background:#29282466;backdrop-filter:blur(2px)}.drawer{margin:0 0 0 auto;width:min(650px,100vw);height:100dvh;max-height:100dvh;max-width:100vw;border-radius:12px 0 0 12px;border-right:0}.dialog-head{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;position:sticky;top:0;z-index:2;background:var(--paper);border-bottom:1px solid var(--line);gap:16px;font-size:12px;color:var(--muted)}.dialog-content{padding:25px 28px 40px}.dialog-content h2{font-family:var(--serif);font-size:25px;margin:8px 0 12px}.dialog-content .lead{font-size:14px;line-height:1.9}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}.detail-grid>div{padding:13px 14px;border:1px solid var(--line);border-radius:7px;background:white;font-size:12px}.detail-grid small{display:block;color:var(--muted);margin-bottom:5px}.detail-block{padding:18px 0;border-top:1px solid var(--line)}.detail-block h3{font-size:13px;margin-bottom:8px}.detail-block p{font-size:13px;color:#57544d;margin:0;line-height:1.95}.detail-block.focus{padding:17px;background:var(--accent-soft);border:0;border-radius:7px;margin:16px 0}.ref-link{display:block;width:100%;padding:12px 0;text-align:left;font-size:12px;border-bottom:1px solid var(--line);color:var(--accent)}.compare-dialog{width:min(1280px,94vw);max-height:90dvh;border-radius:12px}.compare-dialog .dialog-content{padding:22px}.compare-table{min-width:850px;table-layout:fixed}.compare-table th:first-child{width:135px}.compare-table td:first-child{font-size:11px;color:var(--muted);font-weight:500}.compare-table td{min-width:200px}.compare-table td p{margin:0 0 7px}.compare-table th{vertical-align:top}.compare-table th strong{display:block;color:var(--ink);font-size:13px;white-space:normal}.compare-table th .btn{margin-top:10px}.compare-table tr.group-row td{background:#f2ede4;color:#7a503c;font-weight:600;padding:9px 14px}.source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.source-card{border:1px solid var(--line);border-radius:8px;padding:20px;background:#fff}.source-card h3{font-size:14px}.source-card p{font-size:12px;color:var(--muted);line-height:1.8}.source-card small{font-size:11px;color:var(--muted)}.source-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:15px}.section-gap{margin-top:35px}.dual-business{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:25px}.business-card{padding:22px;text-align:left;border-radius:8px;border:1px solid var(--line);background:white}.business-card:first-child{border-top:3px solid var(--accent)}.business-card:last-child{border-top:3px solid var(--green)}.business-card h3{font-family:var(--serif);font-size:22px}.business-card p{color:var(--muted);font-size:13px;margin-bottom:8px}.business-card small{font-size:12px;color:var(--accent)}.master-detail{display:grid;grid-template-columns:255px minmax(0,1fr);gap:22px;align-items:start}.master-list{display:grid;gap:8px}.master-item{text-align:left;padding:15px 16px;border:1px solid var(--line);border-radius:7px;background:#fff}.master-item.active{background:#ede7dc;border-color:#cbbdad}.master-item strong{display:block;font-size:13px;font-weight:600}.master-item small{display:block;font-size:11px;color:var(--muted);margin-top:3px}.detail-panel{border:1px solid var(--line);border-radius:9px;padding:26px;background:#fff;min-width:0}.detail-panel h2{font-family:var(--serif);font-size:25px}.detail-panel .sub{color:var(--muted);font-size:13px;margin-bottom:25px}.kv{display:grid;grid-template-columns:125px 1fr;gap:14px;border-top:1px solid var(--line);padding:14px 0;font-size:13px}.kv dt{color:var(--muted);font-size:12px}.kv dd{margin:0;line-height:1.9}.kv-list{margin:0}.nextbox{background:var(--green-soft);padding:15px 17px;border-radius:7px;color:var(--green);font-size:12px;margin-top:15px}.nextbox strong{display:block;margin-bottom:5px}.link-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.calc-box{border:1px solid var(--line);border-radius:9px;padding:24px;background:white;margin-top:32px}.calc-top{display:flex;justify-content:space-between;align-items:start;gap:15px}.calc-top p{font-size:12px;color:var(--muted)}.calc-inputs{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:14px 0}.calc-inputs input{width:100%;font-size:15px;background:#faf9f6}.calc-result{padding:19px 0 0;border-top:1px solid var(--line);display:flex;gap:40px;flex-wrap:wrap}.calc-result b{font-size:22px;display:block;font-weight:550}.calc-result small{font-size:11px;color:var(--muted)}.calc-result .negative b{color:#a04434}.insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.insight-card{border:1px solid var(--line);border-radius:8px;padding:23px;background:white}.insight-card h3{font-family:var(--serif);font-size:21px}.insight-card>p{font-size:13px;line-height:1.9}.insight-card details{border-top:1px solid var(--line);padding:10px 0;font-size:12px}.insight-card summary{cursor:pointer;color:var(--muted);padding:3px 0}.insight-card details p{margin:8px 0 0;line-height:1.9}.insight-card .verdict{display:block;font-size:11px;color:var(--accent);margin-bottom:10px}.decision-matrix{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff;margin-bottom:25px}.decision-cell{padding:22px;border-right:1px solid var(--line)}.decision-cell:last-child{border-right:0}.decision-cell h3{font-size:15px}.decision-cell p{font-size:12px;line-height:1.9;color:var(--muted)}.decision-cell small{color:var(--muted);font-size:11px}.journey-steps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.journey-step{text-align:left;flex:1;min-width:130px;border:1px solid var(--line);border-radius:8px;padding:13px;background:#fff;font-size:12px;position:relative}.journey-step span{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.journey-step.active{background:var(--ink);color:white;border-color:var(--ink)}.journey-step.active span{color:#bfbab0}.journey-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.journey-grid>section{padding:17px 0;border-top:1px solid var(--line)}.journey-grid h3{font-size:12px;color:var(--muted)}.journey-grid p{font-size:14px;line-height:1.9;margin-bottom:0}.checklist{display:grid;gap:10px;margin:22px 0}.check-row{display:flex;gap:12px;align-items:flex-start;background:#f8f7f3;border:1px solid var(--line);padding:13px 15px;border-radius:7px;cursor:pointer}.check-row input{accent-color:var(--accent);margin:5px 0 0;width:16px;height:16px;flex:none}.check-row strong{display:block;font-size:12px}.check-row small{font-size:11px;color:var(--muted);display:block;margin-top:2px}.progress-line{height:4px;border-radius:4px;background:var(--nav);overflow:hidden;margin:15px 0}.progress-line div{height:100%;background:var(--green);transition:width .2s}.note-area{width:100%;min-height:115px;resize:vertical;line-height:1.9}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:25px}.timeline>div{border-top:2px solid #b7ada0;padding:15px 0}.timeline strong{font-size:13px}.timeline p{font-size:12px;color:var(--muted);margin:7px 0}.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;font-size:12px;border-radius:7px;box-shadow:var(--shadow);z-index:1000;max-width:90vw;text-align:center}.version-line{border-top:1px solid var(--line);padding-top:20px;margin-top:30px;font-size:11px;color:var(--muted)}.mobile-scrim{display:none}
+@media(min-width:1700px){.compare-tray{left:calc(234px + (100vw - 234px - 1502px)/2);right:39px}.product-card{padding:19px}.product-title{font-size:15px}}
+@media(max-width:1250px){.sidebar{width:208px}.main{margin-left:208px;width:calc(100% - 208px)}.topbar{padding:0 26px}.content{padding:29px 26px 100px}.map-board{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.map-board.single .lane-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.compare-tray{left:234px;right:26px}.master-detail{grid-template-columns:220px minmax(0,1fr)}.filters{gap:8px}.calc-inputs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.sidebar{width:245px;transform:translateX(-100%);transition:transform .18s}.sidebar.open{transform:translateX(0)}.mobile-scrim.open{display:block;position:fixed;inset:0;background:#29282466;z-index:35}.main{margin-left:0;width:100%}.topbar{height:60px;padding:0 18px;gap:9px}.menu-btn{display:grid}.crumb{flex:1;font-size:11px;gap:7px}.crumb>span{display:none}.top-actions .btn>span:not([data-icon]){display:none}.top-actions .btn{padding:8px}.content{padding:24px 18px 110px}.page-head{gap:10px}.page-head h1{font-size:27px}.page-tag{display:none}.intro-bar{display:block;padding:15px}.intro-bar>.btn{margin-top:12px}.filters{padding:12px}.field{flex:1;min-width:130px}.searchfield{flex-basis:100%}.field select{max-width:none;width:100%}.map-board{gap:13px}.map-board.single .lane-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card{padding:12px}.compare-tray{left:14px;right:14px;bottom:12px;gap:7px;padding:11px}.compare-tray .tray-names{max-width:40vw}.compare-tray .btn{padding:7px 10px}.compare-tray .clear-label{display:none}.source-list,.insight-grid{grid-template-columns:1fr}.master-detail{grid-template-columns:1fr}.master-list{grid-template-columns:repeat(2,minmax(0,1fr))}.master-item{padding:12px}.detail-panel{padding:20px}.dual-business{gap:10px}.business-card{padding:16px}.business-card h3{font-size:19px}.decision-matrix{grid-template-columns:1fr}.decision-cell{border-right:0;border-bottom:1px solid var(--line);padding:17px}.decision-cell:last-child{border-bottom:0}.timeline{gap:13px}.calc-result{gap:22px}.compare-dialog{width:96vw}.compare-dialog .dialog-content{padding:14px}.dialog-content{padding:22px}.dialog-head{padding:13px 18px}.kv{grid-template-columns:100px 1fr;gap:10px}.journey-step{min-width:43%}.journey-grid{gap:0 20px}}
+@media(max-width:480px){.map-board,.map-board.single .lane-cards{grid-template-columns:1fr}.lane-heading small{min-height:0}.product-card{padding:16px}.resultbar{align-items:flex-start}.resultbar .count-note{display:block;margin-top:3px}.tab{padding:7px 10px;font-size:12px}.page-head h1{font-size:25px}.page-head p{font-size:12px}.topbar .crumb b{max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.detail-grid{grid-template-columns:1fr 1fr}.dual-business{grid-template-columns:1fr}.journey-grid{grid-template-columns:1fr}.master-list{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr}.calc-result{gap:20px}.calc-result b{font-size:19px}.compare-tray p{font-size:11px}.compare-tray .tray-names{max-width:31vw}.compare-tray .btn{font-size:11px}.compare-tray .icon-button{width:26px}.drawer{border-radius:0}.kv{grid-template-columns:85px 1fr}.calc-box{padding:18px}.calc-top{display:block}.calc-top .btn{margin-bottom:10px}.intro-bar .btn{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{@page{size:A4 landscape;margin:12mm}body{background:white;font-size:10pt}.sidebar,.topbar,.compare-tray,.filters,.view-toggle,.top-actions,.select-product,.mobile-scrim,.toast,.print-hide,.detail-link,.dialog-head button{display:none!important}.main{margin:0;width:100%}.content{padding:0;max-width:none}.page-head h1{font-size:24pt}.page-head p{font-size:10pt}.map-board{grid-template-columns:repeat(4,1fr)}.map-board.single .lane-cards{grid-template-columns:repeat(3,1fr)}.product-card,.source-card,.insight-card,.decision-cell{break-inside:avoid;box-shadow:none}.product-card p{font-size:9pt}.product-title{font-size:10pt}.tabbar{display:none}.table-wrap{overflow:visible;border:none}.data-table{min-width:0;width:100%;font-size:9pt}.data-table th,.data-table td{padding:8px}.compare-table{min-width:0;table-layout:auto}.data-table tr{break-inside:avoid}.dialog[open]{position:static;width:100%;max-width:none;height:auto;max-height:none;border:none;margin:0;box-shadow:none;overflow:visible}.dialog::backdrop{display:none}body.print-dialog .app,body.print-dialog .compare-tray{display:none!important}.dialog-content{padding:0}.dialog-head{position:static;padding:0 0 12px}.master-detail{grid-template-columns:200px 1fr}.source-list{grid-template-columns:1fr 1fr}.footnote{font-size:8pt}.business-card,.detail-panel{box-shadow:none}.note-area{min-height:80px}.calc-inputs{grid-template-columns:repeat(4,1fr)}}
+
+/* 科技感主题：保持单文件与离线交互不变，只替换视觉层。 */
+:root{color-scheme:dark;--paper:#08111f;--surface:#101d31;--nav:#0b1628;--ink:#e7f1ff;--muted:#8ea6c2;--line:#29415f;--accent:#42e6df;--accent-soft:#103840;--green:#5fe2b0;--green-soft:#123b35;--blue:#6bb8ff;--purple:#b98cff;--shadow:0 16px 45px #000b1c80;--serif:'Microsoft YaHei','PingFang SC',system-ui,sans-serif}
+body{background:radial-gradient(circle at 78% -10%,#173d5c 0,transparent 32%),radial-gradient(circle at 12% 18%,#10253e 0,transparent 27%),var(--paper);color:var(--ink)}
+a{color:var(--accent)}a:hover{color:#a1fff4}:focus-visible{outline-color:#42e6df99}
+.sidebar{background:linear-gradient(180deg,#0c192d 0%,#08111f 100%);border-color:var(--line);box-shadow:8px 0 28px #00091a33}.brand-mark{background:linear-gradient(135deg,#42e6df,#4ca4ff);color:#071321;box-shadow:0 0 22px #42e6df55}.workspace-label,.sidebar-foot p,.nav-item{color:var(--muted)}.nav-item.active{background:#15344e;color:var(--ink);box-shadow:inset 2px 0 var(--accent),0 0 18px #42e6df12}.nav-item:not(.active):hover{background:#11263e}.nav-count{background:#142943;color:#9ec1df}.status-dot{background:var(--green);box-shadow:0 0 8px var(--green)}
+.topbar{background:#08111fe8;border-color:var(--line)}.crumb b{color:var(--ink)}.btn{background:#12233a;border-color:var(--line);color:var(--ink)}.btn:hover{border-color:#4c769a}.btn.primary{background:var(--accent);border-color:var(--accent);color:#071321}.btn.accent{color:var(--accent);background:#113a42;border-color:#236a72}.btn.ghost{background:transparent}.icon-button:hover{background:#11263e}
+.page-tag,.pill{border-color:var(--line);background:#102138;color:#9db4cf}.intro-bar{border-color:var(--accent);background:linear-gradient(100deg,#103741,#122238 64%,#152841);box-shadow:0 8px 30px #00091a44}.tab.active{background:#1b5870;color:#f0ffff}.tab.market:not(.active){background:#17343e;color:#70eee7}.tab:not(.active):hover{background:#11263e}
+.filters,.product-card,.table-wrap,.detail-grid>div,.source-card,.business-card,.detail-panel,.calc-box,.insight-card,.decision-matrix,.journey-step,.check-row{background:#101d31;border-color:var(--line);box-shadow:0 8px 24px #00091a26}.filters input,.filters select,.calc-inputs input,.note-area{background:#0c182b;border-color:var(--line);color:var(--ink)}.searchwrap svg{color:#6c96bb}.product-card:hover{border-color:#4c769a}.product-card.proposal{background:#142c3b;border-color:#2a6873}.product-card.selected{outline-color:var(--accent)}.select-product{background:#0c182b;border-color:var(--line)}.select-product[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#071321}.product-title:hover,.detail-link{color:var(--accent)}.pill.proposal{background:#3d2f24;color:#ffd27e;border-color:#785c37}.pill.verified{background:#123c35;color:#6ee7b7;border-color:#2d7564}.pill.pending{background:#332c20;color:#efc879;border-color:#6b5934}.lane-heading{border-color:var(--lane-color)}.data-table th{background:#142942;color:#a7bfda}.data-table td{border-color:var(--line)}.data-table tbody tr:hover{background:#13263d}.empty,.notice{background:#102138;border-color:var(--line);color:#a4bad2}.notice strong{color:#d9edff}
+.compare-tray{background:#0b192c;border:1px solid #315275;box-shadow:0 12px 38px #000b1caa}.compare-tray .tray-names{color:#a4bdd5}.compare-tray .btn{background:#152d47;border-color:#315275}.compare-tray .btn.primary{background:var(--accent);border-color:var(--accent);color:#071321}.dialog{background:#0d192c;border-color:var(--line)}.dialog-head{background:#0d192c;border-color:var(--line)}.dialog::backdrop{background:#020711b8}.detail-block{border-color:var(--line)}.detail-block p,.detail-block.focus{color:#bfd1e5}.detail-block.focus{background:#113b42}.ref-link{border-color:var(--line)}.compare-table tr.group-row td{background:#16344b;color:#75e4df}.nextbox{background:#123b35;color:#78e6bb}.master-item{background:#101d31;border-color:var(--line)}.master-item.active{background:#143b52;border-color:#3c8aa2}.journey-step.active{background:#16445d;border-color:#42e6df}.journey-step.active span{color:#a8e9e5}.check-row{background:#0e1c30}.check-row input{accent-color:var(--accent)}.progress-line{background:#172b43}.progress-line div{background:linear-gradient(90deg,var(--accent),var(--blue))}.timeline>div{border-color:#3d7190}.toast{background:#0d1d32;border:1px solid #315275}.version-line{border-color:var(--line)}
+.exec-hero{position:relative;overflow:hidden;border:1px solid #2b6580;border-radius:12px;padding:26px 28px;margin-bottom:22px;background:linear-gradient(120deg,#102d47 0%,#103b45 52%,#1a294d 100%);box-shadow:0 15px 44px #000b1c80}.exec-hero:after{content:'';position:absolute;width:280px;height:280px;right:-90px;top:-150px;border:1px solid #42e6df55;border-radius:50%;box-shadow:0 0 0 18px #42e6df10,0 0 0 36px #42e6df08}.exec-hero h2{font-size:25px;margin-bottom:8px}.exec-hero p{max-width:850px;color:#c8e0f2;margin-bottom:0}.exec-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #4ab9b8;background:#0e4a51;color:#91fff4;border-radius:20px;padding:4px 10px;font-size:11px;margin-bottom:13px}.signal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:18px 0 25px}.signal-card{border:1px solid var(--line);border-radius:9px;padding:17px;background:#0f1e33;min-height:145px}.signal-card h3{font-size:14px;margin-bottom:7px}.signal-card p{font-size:12px;line-height:1.8;color:#a9bfd6}.signal-card .signal-status{font-size:11px;color:var(--accent);font-weight:600}.decision-gate{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 24px}.decision-gate>div{border-left:2px solid var(--accent);padding:15px 16px;background:#0e1c30;border-radius:0 8px 8px 0}.decision-gate strong{display:block;font-size:13px;margin-bottom:5px}.decision-gate p{font-size:12px;color:#a9bfd6;margin:0;line-height:1.8}.action-strip{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding-top:17px;margin-top:22px}.action-strip p{margin:0;font-size:12px;color:#b9cee2}.source-confidence{color:#75e4df;font-size:11px}.evidence-tag{display:inline-block;margin:0 5px 5px 0;font-size:10px;border:1px solid #315275;border-radius:4px;padding:2px 6px;color:#a8c6df;background:#11253d}
+@media(max-width:800px){.signal-grid,.decision-gate{grid-template-columns:1fr}.exec-hero{padding:21px}.action-strip{display:block}.action-strip .btn{margin-top:10px}}
+
+.view-toggle{flex-shrink:0}.view-toggle button{white-space:nowrap}.resultbar>div:first-child{min-width:0}
+@media(max-width:480px){.intro-bar p{display:none}.resultbar .count-note{font-size:10px;line-height:1.7}.view-toggle button{padding:6px 7px}}
+</style></head><body>
+<div class="mobile-scrim" id="scrim"></div>
+<div class="app"><aside class="sidebar" id="sidebar" aria-label="主导航"><div class="brand"><span class="brand-mark" data-icon="spark"></span>数智研</div><div class="workspace-label">临床医生端业务决策工作台</div><nav class="nav-group" id="nav"></nav><div class="sidebar-foot"><p><span class="status-dot"></span>本地研究版 · 2026.11.12</p><p>公开定位 / 方案假设 / 待核实<br>每项判断保留依据与边界。</p><p>⌘ / Ctrl + K 搜索产品</p></div></aside>
+<main class="main"><div class="topbar"><button class="icon-button menu-btn" data-menu aria-label="展开导航" aria-controls="sidebar" aria-expanded="false" data-icon="menu"></button><div class="crumb"><span>业务研究</span><span>/</span><b id="crumb-page">产品与行业地图</b></div><div class="top-actions"><button class="btn" id="csv-btn" data-export><span data-icon="download"></span><span>导出当前筛选</span></button><button class="btn" data-print aria-label="打印当前页"><span data-icon="print"></span><span>打印</span></button></div></div><div class="content" id="main-content"></div></main></div>
+<div class="compare-tray" id="compare-tray" hidden aria-label="已选择的对比产品"></div>
+<dialog class="dialog drawer" id="drawer" aria-labelledby="drawer-head-label"><header class="dialog-head"><span id="drawer-head-label">产品分析</span><div style="display:flex;gap:7px"><button class="icon-button" data-print aria-label="打印当前详情" data-icon="print"></button><button class="icon-button" data-close="drawer" aria-label="关闭详情" data-icon="close"></button></div></header><div class="dialog-content" id="drawer-body"></div></dialog>
+<dialog class="dialog compare-dialog" id="compare" aria-labelledby="compare-title"><header class="dialog-head"><strong id="compare-title">产品与商业模式对比</strong><div style="display:flex;gap:8px"><button class="btn" data-print><span data-icon="print"></span>打印对比</button><button class="icon-button" data-close="compare" aria-label="关闭对比" data-icon="close"></button></div></header><div class="dialog-content" id="compare-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script type="application/json" id="research-data">{
+  "sources": [
+    {
+      "id": "company",
+      "title": "数智研服务介绍（2026-08-28）",
+      "url": "",
+      "kind": "公司材料",
+      "scope": "此前材料披露区域数据、Protocol、SAP、医学统计质控与RWS/RWE服务基础。",
+      "limit": "未独立审计；不证明本页拟开发服务已经上线，也不证明特定病种数据可用。",
+      "date": "2026-11-06—07"
+    },
+    {
+      "id": "iqvia-market",
+      "title": "IQVIA · Patient Characterization and Journey",
+      "url": "https://www.iqvia.com/solutions/commercialization/commercial-analytics/omnichannel-engagement-and-insights/patient-insights-for-hcp-engagement/patient-characterization-and-journey",
+      "kind": "厂商官网",
+      "scope": "公开介绍患者画像、诊疗路径及品牌与市场团队的分析用途。",
+      "limit": "海外数据与商业案例不能外推中国授权、效果或成交价格。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "ipsos",
+      "title": "Ipsos · Healthcare",
+      "url": "https://www.ipsos.com/en/healthcare",
+      "kind": "厂商官网",
+      "scope": "列出定制医疗研究、监测、咨询、定性研究、RWE与AI相关服务。",
+      "limit": "具体项目中AI替代多少人工、价格和中国交付能力需另行核实。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "iqvia",
+      "title": "IQVIA · Solutions",
+      "url": "https://www.iqvia.com/",
+      "kind": "厂商官网",
+      "scope": "公开导航列有RWE、研究设计、医学事务、经济学及价值服务。",
+      "limit": "导航与定位不证明具体项目效果。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "flatiron",
+      "title": "Flatiron · Real-World Evidence",
+      "url": "https://flatiron.com/real-world-evidence",
+      "kind": "厂商官网",
+      "scope": "肿瘤真实世界数据、证据分析与生命科学服务。",
+      "limit": "不直接外推中国数据覆盖、可及性和监管适用性。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "yidu",
+      "title": "医渡科技 · 解决方案",
+      "url": "https://www.yidutech.com/",
+      "kind": "厂商官网",
+      "scope": "医院科研、临床、管理平台与生命科学、健康管理解决方案。",
+      "limit": "本页按服务领域概括，具体模块和报价待核实。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "synyi",
+      "title": "森亿智能 · 产品与解决方案",
+      "url": "https://www.synyi.com/",
+      "kind": "厂商官网",
+      "scope": "临床辅助决策与质控、科研数据挖掘、临床研究智能体。",
+      "limit": "厂商披露的效率案例不视为独立验证。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "taimei",
+      "title": "太美医疗科技 · 数智临床",
+      "url": "https://cn.taimei.com/",
+      "kind": "厂商官网",
+      "scope": "列有IIT-EDC、eCollect、eCOA及临床开发AI智能体。",
+      "limit": "EDC能力与AI方案设计能力应分开核实，不能互相替代。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "canopy",
+      "title": "Canopy · Life Sciences",
+      "url": "https://www.canopycare.us/life-sciences?hsLang=en-us",
+      "kind": "厂商官网",
+      "scope": "症状采集、风险转交、治疗流程及患者教育，面向生命科学伙伴。",
+      "limit": "效果数字属于厂商及其列示研究，不作为跨产品效果排名。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "hippocratic",
+      "title": "Hippocratic AI · Life Sciences业务公告",
+      "url": "https://www.prnewswire.com/news-releases/hippocratic-ai-expands-life-sciences-leadership-team-as-pharma-and-medtech-demand-for-voice-ai-agents-accelerates-302778102.html",
+      "kind": "厂商公告",
+      "scope": "此前公开公告介绍生命科学领域语音AI业务。",
+      "limit": "沿用前期资料；本轮官网访问受限。中国业务、效果和价格待核实。",
+      "date": "2026-11-06—07"
+    },
+    {
+      "id": "linkdoc",
+      "title": "零氪科技 · LinkCare / LinkSolutions",
+      "url": "https://www.linkdoc.com/",
+      "kind": "厂商官网",
+      "scope": "患者关爱、医患管理、数据洞察、RWS和生命科学服务。",
+      "limit": "不据此认定任一具体DTP、输注或医护响应服务已覆盖目标医院。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "xunfei",
+      "title": "讯飞医疗 · 智医随行发布",
+      "url": "https://www.xunfeihealthcare.com/news/181/1085.html",
+      "kind": "厂商官网",
+      "scope": "专病路径、健康宣教、复诊提醒及医护患者管理。",
+      "limit": "合作与发布信息不等于所有场景的独立临床效果。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "nsfc",
+      "title": "国自然 · 资金使用问答",
+      "url": "https://www.nsfc.gov.cn/p1/2961/2965/3659/jfgl.html",
+      "kind": "官方规则",
+      "scope": "课题经费使用及依托单位管理要求。",
+      "limit": "适用科目、采购和合同需依托单位按具体服务确认。",
+      "date": "2026-11-07"
+    },
+    {
+      "id": "capri",
+      "title": "CAPRI · 数字工具与护士导航随机研究",
+      "url": "https://www.nature.com/articles/s41591-022-01788-1",
+      "kind": "原始研究",
+      "scope": "支持口服抗肿瘤治疗中数字工具加护士导航的组合价值。",
+      "limit": "不能把组合效果归因于生成式AI，也不证明中国支付意愿。",
+      "date": "2026-11-06—07"
+    },
+    {
+      "id": "trialgpt",
+      "title": "TrialGPT · 试验匹配研究",
+      "url": "https://www.nature.com/articles/s41467-024-53081-z",
+      "kind": "原始研究",
+      "scope": "支持特定临床试验筛查任务的效率探索。",
+      "limit": "小规模任务研究，不代表完整研究周期提效或自动入组。",
+      "date": "2026-11-06—07"
+    },
+    {
+      "id": "adoption",
+      "title": "中国肿瘤医护AI接纳调查",
+      "url": "https://doi.org/10.1093/jamiaopen/ooag154",
+      "kind": "观察性研究",
+      "scope": "2025年调查，2026年发表；有助于理解使用、信任和接纳问题。",
+      "limit": "便利抽样包含医生和护士；接纳和使用不能转换为付费率。",
+      "date": "2026-11-06—07"
+    },
+    {
+      "id": "lead",
+      "title": "海心、若初：用户指定的对标线索",
+      "url": "",
+      "kind": "待核实",
+      "scope": "保留用户希望研究的对象，待确认法律主体、具体产品和公开资料。",
+      "limit": "本页未核实能力、客户、价格或效果，不纳入已证实能力判断。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "nhc-stat",
+      "title": "国家卫健委 · 2024年卫生健康事业发展统计公报",
+      "url": "https://www.nhc.gov.cn/guihuaxxs/c100133/202512/f1c3a3c617484a27a1a26a468afbaeee/files/2024%E5%B9%B4%E6%88%91%E5%9B%BD%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E4%BA%8B%E4%B8%9A%E5%8F%91%E5%B1%95%E7%BB%9F%E8%AE%A1%E5%85%AC%E6%8A%A5-20251201161542231.pdf",
+      "kind": "官方统计",
+      "scope": "提供卫生技术人员、医疗机构、医院和医生工作量等需求/触达基数。",
+      "limit": "只能作为医疗系统规模和工作量代理指标，不能直接当作目标市场规模、医生付费率或数字服务收入。",
+      "date": "2025-12-01"
+    },
+    {
+      "id": "policy",
+      "title": "国务院办公厅 · 关于推动公立医院高质量发展的意见",
+      "url": "https://www.nhc.gov.cn/wjw/mtbd/202106/947fd3eb610046948ae0449a503bf4c1.shtml",
+      "kind": "政策文件",
+      "scope": "支持临床研究、智慧医院和医疗教学科研管理协同，说明组织层面的数字化方向。",
+      "limit": "政策方向不等于已落实预算、具体采购或单个产品的成交机会。",
+      "date": "2021-06-04"
+    },
+    {
+      "id": "nhc-service",
+      "title": "国家卫健委 · 2024年1—11月全国医疗服务情况",
+      "url": "https://www.nhc.gov.cn/mohwsbwstjxxzx/s7967/202506/f93d05e2328f4def8bf53091ff8bbca5.shtml",
+      "kind": "官方统计",
+      "scope": "提供全国诊疗、医院诊疗和出院人次及同比变化，作为临床活动量代理。",
+      "limit": "医疗服务量增长不等于数字科研服务市场增长，也不能替代目标客户访谈和订单验证。",
+      "date": "2025-06-03"
+    },
+    {
+      "id": "procurement-1",
+      "title": "武汉市第三医院 · 科研服务管理平台中标结果公告",
+      "url": "https://www.ccgp-hubei.gov.cn/notice/202607/notice_1234109456233308160.html",
+      "kind": "医院采购",
+      "scope": "显示医院科研服务管理存在正式采购、供应商、中标金额/折扣和服务类付款字段。",
+      "limit": "采购内容含试剂、检测等科研技术服务，不是纯软件SaaS价格或医生个人订阅证据。",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "procurement-2",
+      "title": "内蒙古医科大学附属医院 · 智慧科研管理平台服务项目",
+      "url": "https://www.ccgp-neimenggu.gov.cn/gpx-bid-file/150001/gpx-tender/2023/7/26/402881cc893faf4a01898fb22a007857.pdf?accessCode=6fa93f86555be9a6fbdeeed6b15d62a3",
+      "kind": "医院采购",
+      "scope": "证明院级智慧科研管理平台可以进入正式竞争性磋商采购。",
+      "limit": "采购文件不等于成交、续费、实际使用效果或可复制客单价。",
+      "date": "2023-07-26"
+    },
+    {
+      "id": "procurement-3",
+      "title": "西安市第三医院 · 科研管理平台系统采购项目",
+      "url": "https://www.ccgp-shaanxi.gov.cn/gpx-bid-file/610101/gpx-bidcore/2024/6/17/8a69c6c28fde639d01902529e3a725cf.pdf?accessCode=5a19d9ae92718020b5c5561f01372864",
+      "kind": "医院采购",
+      "scope": "显示医院科研管理平台系统存在明确采购需求和采购人。",
+      "limit": "采购需求不等于成交、续费、采用率或软件利润率。",
+      "date": "2024-06-17"
+    },
+    {
+      "id": "ethics",
+      "title": "国家卫健委 · 涉及人的生命科学和医学研究伦理审查办法",
+      "url": "https://www.nhc.gov.cn/wjw/c100375/202302/902b4a1dc3af4aba862a6387e6e376dc.shtml",
+      "kind": "伦理规则",
+      "scope": "用于判断临床研究、医企合作、数据来源和伦理审查边界。",
+      "limit": "具体项目仍需结合匿名化、机构伦理、数据授权和研究用途判断，不构成法律意见。",
+      "date": "2023-02-18"
+    },
+    {
+      "id": "privacy",
+      "title": "国家网信办 · 中华人民共和国个人信息保护法",
+      "url": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm",
+      "kind": "隐私规则",
+      "scope": "医疗健康信息的敏感个人信息属性、处理目的、必要性、委托处理和影响评估等约束。",
+      "limit": "不是针对某个项目的法律意见；真实数据进入前仍需机构合规与安全审查。",
+      "date": "2021-08-20"
+    },
+    {
+      "id": "ai-reg",
+      "title": "国家药监局 · 人工智能医用软件产品分类界定指导原则",
+      "url": "https://www.nmpa.gov.cn/directory/web/nmpa/ylqx/ylqxggtg/index_24.html",
+      "kind": "监管规则",
+      "scope": "提示从科研辅助越界到诊断、治疗建议或风险预警时，产品预期用途与医疗器械软件分类需要单独判断。",
+      "limit": "具体分类、注册和临床评价要求取决于产品功能、预期用途和申报路径。",
+      "date": "2021-07-08"
+    },
+    {
+      "id": "reference1",
+      "title": "参考结构 · 医疗AI行业地图",
+      "url": "https://kylokuo.github.io/AI-for-Med/%E5%8C%BB%E7%96%97AI%E6%99%BA%E8%83%BD%E4%BD%93%E8%A1%8C%E4%B8%9A%E6%95%B0%E6%8D%AE%E5%BA%93.html",
+      "kind": "结构参考",
+      "scope": "场景、产品、采购与双端服务的组织方式。",
+      "limit": "不是独立的商业或临床证据。",
+      "date": "2026-11-11"
+    },
+    {
+      "id": "reference2",
+      "title": "参考结构 · 失眠治疗证据决策中心",
+      "url": "https://kylokuo.github.io/Fazamorexant/",
+      "kind": "结构参考",
+      "scope": "证据、局限、缺口与决策的组织方式。",
+      "limit": "不将该病种结论或其规划评分迁移到本项目。",
+      "date": "2026-11-11"
+    }
+  ],
+  "products": [
+    {
+      "id": "aidm-flow",
+      "name": "患者流与市场研究",
+      "brand": "数智研",
+      "lane": "market",
+      "users": [
+        "药企/机构",
+        "医生"
+      ],
+      "payers": [
+        "药企市场部"
+      ],
+      "kind": "拟开发",
+      "summary": "把诊疗路径和访谈转成品牌、患者服务与资源配置的依据。",
+      "deliver": "患者流地图、治疗模式报告、疾病领域白皮书、策略建议",
+      "ai": "拟用于病历结构化、路径归类、访谈整理和分析复核辅助。",
+      "human": "市场研究人员设计样本；KOL解释临床原因；分析师核验。",
+      "data": "先确认代表性、跨院连接、观察期和变量定义。",
+      "pricing": "按项目与更新周期报价；市场价格尚未验证。",
+      "boundary": "白皮书是成果形式；未观察到后续治疗不等于真实流失。",
+      "insight": "连接数据分析与KOL解释，值得作为独立市场部业务试点。",
+      "verify": "找到一个具体品牌决策，完成数据可行性与付费报价。",
+      "refs": [
+        "company",
+        "iqvia-market",
+        "ipsos"
+      ],
+      "priority": "先验证",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "aidm-evidence",
+      "name": "Evidence plan与聚焦RWE",
+      "brand": "数智研",
+      "lane": "research",
+      "users": [
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "药企医学/RWE"
+      ],
+      "kind": "拟开发",
+      "summary": "从临床问题和决策用途出发，定义值得投入的证据项目。",
+      "deliver": "证据缺口、研究优先级、方案、数据可行性、分析报告",
+      "ai": "拟支持文献整理、变量抽取、质控提示和可复现分析。",
+      "human": "KOL审查科学问题，医学与统计团队承担设计和解释。",
+      "data": "要求授权、终点可测、混杂因素及缺失信息可评估。",
+      "pricing": "前期方案假设：规划/有限可行性3—5万元；聚焦研究20—40万元。",
+      "boundary": "报价不是市场均价；不保证阳性结果、发表或监管接受。",
+      "insight": "与公司材料披露的研究交付基础较接近，优先验证。",
+      "verify": "明确预算负责人、证据用途、固定范围与验收标准。",
+      "refs": [
+        "company",
+        "flatiron"
+      ],
+      "priority": "先验证",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "aidm-pi",
+      "name": "PI科研执行模块",
+      "brand": "数智研",
+      "lane": "research",
+      "users": [
+        "医生"
+      ],
+      "payers": [
+        "PI科研经费"
+      ],
+      "kind": "拟开发",
+      "summary": "帮助在研课题完成明确的数据、质控、统计或随访任务。",
+      "deliver": "数据集、变量字典、溯源记录、代码、表图和质控报告",
+      "ai": "拟用于病例结构化、规则检查、重复任务和代码辅助。",
+      "human": "PI确认任务；医学统计人员复核；机构采购与付款。",
+      "data": "服务须与课题匹配，数据及使用授权落实。",
+      "pricing": "前期方案假设：单项1—3万元，限定项目3—8万元。",
+      "boundary": "国自然获批不能证明经费可用或支付意愿；个人订阅另算。",
+      "insight": "从边界清楚的小模块验证成交与交付经济性。",
+      "verify": "课题相关性、预算余额、采购科目、具体报价接受度。",
+      "refs": [
+        "company",
+        "nsfc"
+      ],
+      "priority": "先验证",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "aidm-mdt",
+      "name": "复杂病例与MDT准备",
+      "brand": "数智研",
+      "lane": "clinical",
+      "users": [
+        "医生"
+      ],
+      "payers": [
+        "医院预算"
+      ],
+      "kind": "拟开发",
+      "summary": "整理病史、治疗时间轴和带出处的证据，供医生讨论。",
+      "deliver": "病历摘要、缺失资料清单、治疗时间轴、MDT材料",
+      "ai": "拟做信息抽取、一致性检查与证据匹配。",
+      "human": "临床医生核对关键事实并作出决策。",
+      "data": "需要及时、完整的院内资料与工作流程接入。",
+      "pricing": "项目/使用服务费待测；先核实机构预算。",
+      "boundary": "不把材料整理作为已验证的治疗推荐能力。",
+      "insight": "可作为狭窄任务探索，暂不承诺全面诊疗平台。",
+      "verify": "与现有准备流程比较遗漏、错误和包含复核的净工时。",
+      "refs": [
+        "company",
+        "synyi"
+      ],
+      "priority": "条件试点",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "aidm-care",
+      "name": "治疗早期患者管理",
+      "brand": "数智研",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "药企患者支持",
+        "医院预算"
+      ],
+      "kind": "拟开发",
+      "summary": "围绕治疗启动后的症状、复查与漏随访提供持续支持。",
+      "deliver": "结构化随访、患者摘要、复查任务、转交与处理记录",
+      "ai": "拟用于采集、整理、提醒与按审核规则转交。",
+      "human": "护士接收与响应，医生临床决策；明确药物警戒责任。",
+      "data": "需要患者授权、触达、实时信息和医护响应资源。",
+      "pricing": "启动费＋有效管理患者月费用＋约定人工服务，具体报价待测。",
+      "boundary": "历史研究数据不能替代实时服务；护理组合效果不等于AI增量。",
+      "insight": "预算与医护响应落实后启动，不宜先铺全国平台。",
+      "verify": "患者持续完成率、问题处理、医护净工时与完整成本。",
+      "refs": [
+        "company",
+        "capri",
+        "canopy"
+      ],
+      "priority": "条件试点",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "aidm-access",
+      "name": "医保、DTP与就医支持",
+      "brand": "数智研",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "药企患者支持",
+        "患者家庭",
+        "商保"
+      ],
+      "kind": "拟开发",
+      "summary": "核实政策、购药和就医要求，衔接有能力履约的机构。",
+      "deliver": "医保材料清单、处方对应药房信息、输注接收要求、陪诊安排",
+      "ai": "拟用于资料整理、任务追踪和已核实信息检索。",
+      "human": "药房负责审方调配结算；医院负责医疗服务；协调人员跟进。",
+      "data": "确认当地政策、有效处方、库存、价格、结算及接收条件。",
+      "pricing": "按服务包或机构项目收费，避免同一工作重复收费。",
+      "boundary": "不保证报销、号源、药品供应或输注接收；药品待遇不等于AI费可报销。",
+      "insight": "真实需求明确，能否履约和覆盖成本比聊天能力更关键。",
+      "verify": "逐项确定服务商、响应时限、成本和患者愿付价格。",
+      "refs": [
+        "company",
+        "linkdoc"
+      ],
+      "priority": "条件试点",
+      "region": "中国",
+      "evidence": "方案假设"
+    },
+    {
+      "id": "iqvia-market",
+      "name": "Patient Characterization & Journey",
+      "brand": "IQVIA",
+      "lane": "market",
+      "users": [
+        "药企/机构"
+      ],
+      "payers": [
+        "药企市场部"
+      ],
+      "kind": "外部产品",
+      "summary": "面向品牌与市场团队的患者画像及诊疗路径分析。",
+      "deliver": "患者路径、处方和相关医疗专业人员分析；以合同为准。",
+      "ai": "官网披露AI/机器学习用于相关分析套件。",
+      "human": "专业分析与客户项目团队；具体配置待核实。",
+      "data": "官网以其可用患者及医疗专业人员数据库为基础。",
+      "pricing": "具体价格、合同和中国项目范围待核实。",
+      "boundary": "海外数据库覆盖与案例不能作为中国项目效果证据。",
+      "insight": "是患者流产品的直接模式参照；数智研需证明本地数据与解释价值。",
+      "verify": "比较同一病种的问题回答、样本代表性、交付周期与报价。",
+      "refs": [
+        "iqvia-market"
+      ],
+      "priority": "重点对标",
+      "region": "国际",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "ipsos",
+      "name": "Healthcare Research & Advisory",
+      "brand": "Ipsos",
+      "lane": "market",
+      "users": [
+        "药企/机构",
+        "医生"
+      ],
+      "payers": [
+        "药企市场部",
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "医疗领域定制研究、定性研究、监测和咨询。",
+      "deliver": "市场研究、监测、咨询及相关证据服务；按项目确定。",
+      "ai": "官网列有AI解决方案与高级分析，具体模块待核实。",
+      "human": "研究设计、定性访谈和专业咨询仍是重要组成。",
+      "data": "数据与访谈组合依具体研究设计确定。",
+      "pricing": "具体报价与合同结构待核实。",
+      "boundary": "不预设传统市场研究公司没有AI或真实世界数据能力。",
+      "insight": "数智研需与研究方法和洞察质量竞争，而不只展示数据量。",
+      "verify": "核对其具体病种服务、数据来源、方法与客户决策价值。",
+      "refs": [
+        "ipsos"
+      ],
+      "priority": "重点对标",
+      "region": "国际",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "link-insight",
+      "name": "LinkSolutions 数据洞察与RWS",
+      "brand": "零氪科技",
+      "lane": "market",
+      "users": [
+        "药企/机构",
+        "医生"
+      ],
+      "payers": [
+        "药企市场部",
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "公开定位覆盖生命科学临床研究与商业化的数据服务。",
+      "deliver": "数据洞察、RWS、研究招募及商业化服务。",
+      "ai": "官网披露NLP、数据治理与AI建模。",
+      "human": "医学、数据与项目交付团队；人员配置待核实。",
+      "data": "公开定位基于真实世界医疗数据，具体可用范围待核实。",
+      "pricing": "具体价格及付款部门待核实。",
+      "boundary": "官网产品组合不证明某个具体患者流问题可以回答。",
+      "insight": "与数智研的数据加研究模式相邻，应做同题比较。",
+      "verify": "索取病种变量、授权、溯源、交付样例及采购路径。",
+      "refs": [
+        "linkdoc"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "synyi-clinical",
+      "name": "临床辅助决策与质控",
+      "brand": "森亿智能",
+      "lane": "clinical",
+      "users": [
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "医院预算"
+      ],
+      "kind": "外部产品",
+      "summary": "以院内数据为基础的诊疗支持、病历质控与医生工作站。",
+      "deliver": "诊疗支持、质控提示与院内工作流程模块。",
+      "ai": "官网列有临床辅助决策与质控智能体。",
+      "human": "医生判断、医院信息及质控团队参与。",
+      "data": "依赖院内数据和系统接入。",
+      "pricing": "具体实施、授权及维护报价待核实。",
+      "boundary": "厂商案例不能替代目标医院效果与适用性验证。",
+      "insight": "数智研若进入院内诊疗工具，需要证明集成与任务优势。",
+      "verify": "比较使用负担、关键错误、净工时和集成成本。",
+      "refs": [
+        "synyi"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "synyi-research",
+      "name": "临床研究智能体与科研平台",
+      "brand": "森亿智能",
+      "lane": "research",
+      "users": [
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "医院预算",
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "覆盖数据采集、队列、分析及研究规划的公开产品方向。",
+      "deliver": "科研数据挖掘、队列与研究过程支持。",
+      "ai": "官网列有临床研究智能体及数据挖掘。",
+      "human": "研究者与方法学人员审核研究问题和结果。",
+      "data": "院内数据治理及可用专病队列是实施条件。",
+      "pricing": "机构报价与单项目模式待核实。",
+      "boundary": "平台范围和实际可交付研究质量需要分开核实。",
+      "insight": "数智研可先争取院内平台尚未满足的限定任务。",
+      "verify": "用同一批样本与同一验收标准比较。",
+      "refs": [
+        "synyi"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "yidu-research",
+      "name": "医院科研与生命科学解决方案",
+      "brand": "医渡科技",
+      "lane": "research",
+      "users": [
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "医院预算",
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "基于医疗数据结构化和疾病洞察的科研与证据服务。",
+      "deliver": "医院科研平台、数据分析及生命科学项目。",
+      "ai": "官网披露数据处理与模型能力。",
+      "human": "医学、运营和研究专业团队参与。",
+      "data": "医院/区域数据和疾病知识积累，具体项目权限待核实。",
+      "pricing": "模块、采购与项目价格待核实。",
+      "boundary": "官网总体生态不能等同单个模块的效果保证。",
+      "insight": "数据、医学与运营组合是参照，数智研需有专病切入口。",
+      "verify": "核实研究变量、真实交付质量和项目成本。",
+      "refs": [
+        "yidu"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "taimei",
+      "name": "IIT-EDC / eCollect",
+      "brand": "太美医疗科技",
+      "lane": "research",
+      "users": [
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "医院预算",
+        "PI科研经费",
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "临床研究电子数据采集及研发数字化工具。",
+      "deliver": "EDC及相关临床数据流程产品；具体模块按项目确认。",
+      "ai": "官网另列AI智能体；不能据此认定全部EDC功能均由AI完成。",
+      "human": "研究团队设计数据采集和质控，系统支持执行。",
+      "data": "采集与管理研究数据；不是天然提供既有临床数据。",
+      "pricing": "具体软件、实施、服务价格待核实。",
+      "boundary": "系统采购不等于购买科学设计、统计服务或病例数据。",
+      "insight": "是工具型替代方案；数智研需明确卖软件还是交付服务。",
+      "verify": "比较数据来源、研究服务范围和总使用成本。",
+      "refs": [
+        "taimei"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "flatiron",
+      "name": "Real-World Evidence Solutions",
+      "brand": "Flatiron Health",
+      "lane": "research",
+      "users": [
+        "药企/机构",
+        "医生"
+      ],
+      "payers": [
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "肿瘤真实世界数据与证据服务，覆盖研发及上市后问题。",
+      "deliver": "肿瘤RWD、研究分析与证据服务。",
+      "ai": "官网描述AI与专业肿瘤知识的结合。",
+      "human": "医学与方法学专业工作参与。",
+      "data": "依托其可用肿瘤数据，国家与项目适用性不同。",
+      "pricing": "数据和项目报价未核实。",
+      "boundary": "数据覆盖、研究结果及监管用途不能直接跨国复制。",
+      "insight": "重点借鉴专病变量与证据可信度，而非只比较样本总量。",
+      "verify": "考察变量验证、研究方法、透明性及适用边界。",
+      "refs": [
+        "flatiron"
+      ],
+      "priority": "重点对标",
+      "region": "国际",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "iqvia-rwe",
+      "name": "Real World Evidence",
+      "brand": "IQVIA",
+      "lane": "research",
+      "users": [
+        "药企/机构",
+        "医生"
+      ],
+      "payers": [
+        "药企医学/RWE"
+      ],
+      "kind": "外部产品",
+      "summary": "涵盖研究设计、真实世界数据、医学及经济学相关服务。",
+      "deliver": "按具体研究合同交付数据、分析及证据产品。",
+      "ai": "官网列有AI、NLP与分析相关能力。",
+      "human": "综合专业团队交付，配置按具体合同核实。",
+      "data": "数据来源与可用地区取决于项目。",
+      "pricing": "公开入口不提供本次可比报价。",
+      "boundary": "综合能力不代表所有细分项目都适合或成本最低。",
+      "insight": "与综合服务商相比，数智研应验证聚焦服务的质量和经济性。",
+      "verify": "比较相同问题、工作范围与交付验收。",
+      "refs": [
+        "iqvia"
+      ],
+      "priority": "重点对标",
+      "region": "国际",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "canopy",
+      "name": "Oncology Care / Life Sciences",
+      "brand": "Canopy",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生",
+        "药企/机构"
+      ],
+      "payers": [
+        "药企患者支持",
+        "医院预算"
+      ],
+      "kind": "外部产品",
+      "summary": "症状监测、风险转交、治疗流程与患者教育。",
+      "deliver": "患者采集、医护任务与治疗特定服务。",
+      "ai": "官网披露AI整理反馈、风险提示与个性化教育。",
+      "human": "医护团队接收并处理问题。",
+      "data": "需要患者反馈与临床工作流程对接。",
+      "pricing": "中国项目和可比报价待核实。",
+      "boundary": "美国服务与支付环境不同，不以留治等营销指标直接证明AI效果。",
+      "insight": "患者服务必须与临床处理连通，这是数智研需要补齐的能力。",
+      "verify": "核实有效管理定义、响应责任和每患者月完整成本。",
+      "refs": [
+        "canopy"
+      ],
+      "priority": "重点对标",
+      "region": "国际",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "hippocratic",
+      "name": "Healthcare Voice Agents",
+      "brand": "Hippocratic AI",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "药企/机构"
+      ],
+      "payers": [
+        "医院预算",
+        "药企患者支持"
+      ],
+      "kind": "外部产品",
+      "summary": "医疗场景语音沟通智能体，前期资料涉及生命科学服务。",
+      "deliver": "具体语音服务任务与机构工作流程，按合同确定。",
+      "ai": "语音对话AI；本轮未重新核实具体版本及功能范围。",
+      "human": "需明确临床转交、异常处理和机构责任。",
+      "data": "语言、系统接入及中国部署适用性待核实。",
+      "pricing": "具体收费、国内服务及效果待核实。",
+      "boundary": "本轮官网访问受限；不采用未经复核的效果和规模数字。",
+      "insight": "可借鉴任务自动化，但不能替代本地服务团队与资源。",
+      "verify": "核实任务边界、转交失败、语言表现与总成本。",
+      "refs": [
+        "hippocratic"
+      ],
+      "priority": "观察",
+      "region": "国际",
+      "evidence": "信息有限"
+    },
+    {
+      "id": "link-care",
+      "name": "LinkCare / 医患管理服务",
+      "brand": "零氪科技",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "药企患者支持",
+        "医院预算"
+      ],
+      "kind": "外部产品",
+      "summary": "全生命周期照护、患者关爱与医患管理的公开服务组合。",
+      "deliver": "患者关爱、医学随访与互联网医疗相关服务。",
+      "ai": "官网披露AI监测和结构化医疗数据能力。",
+      "human": "专业团队与医疗服务主体参与。",
+      "data": "实际触达、医院覆盖及数据权限待核实。",
+      "pricing": "目标项目的付款方和具体报价待核实。",
+      "boundary": "不能从组合介绍推断所有城市均可提供DTP或输注安排。",
+      "insight": "是服务履约型对标，需比较响应与交付成本。",
+      "verify": "询问真实服务记录、医院/药房合作和实际履约责任。",
+      "refs": [
+        "linkdoc"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "xunfei",
+      "name": "智医随行",
+      "brand": "讯飞医疗",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "医院预算",
+        "药企患者支持"
+      ],
+      "kind": "外部产品",
+      "summary": "专病路径、宣教、复诊提醒与医护患者管理。",
+      "deliver": "按公开发布介绍支持院前、院中、院后服务。",
+      "ai": "基于医疗大模型及经审核专病路径。",
+      "human": "公开介绍包含专家审核及医生核验。",
+      "data": "需要院内系统和专病流程对接。",
+      "pricing": "医院项目报价及药企预算路径待核实。",
+      "boundary": "列示付款方中药企路径为待验证可能性，不是已确认合同。",
+      "insight": "数智研应比较实际工作流程，而不只比较对话功能。",
+      "verify": "核实目标专病覆盖、医护响应、系统集成和验收。",
+      "refs": [
+        "xunfei"
+      ],
+      "priority": "重点对标",
+      "region": "中国",
+      "evidence": "公开定位"
+    },
+    {
+      "id": "haixin",
+      "name": "具体产品待核实",
+      "brand": "海心",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "待核实"
+      ],
+      "kind": "对标线索",
+      "summary": "保留用户指定对象，待确认公司主体与具体产品。",
+      "deliver": "待核实",
+      "ai": "待核实",
+      "human": "待核实",
+      "data": "待核实",
+      "pricing": "待核实",
+      "boundary": "不把名称或行业印象写成已确认能力。",
+      "insight": "先取得可靠公开资料和产品演示，再进入能力判断。",
+      "verify": "法律主体、产品名称、目标人群、客户、交付、报价与来源。",
+      "refs": [
+        "lead"
+      ],
+      "priority": "待核实",
+      "region": "中国",
+      "evidence": "待核实"
+    },
+    {
+      "id": "ruochu",
+      "name": "具体产品待核实",
+      "brand": "若初",
+      "lane": "patient",
+      "users": [
+        "患者",
+        "医生"
+      ],
+      "payers": [
+        "待核实"
+      ],
+      "kind": "对标线索",
+      "summary": "保留用户指定对象，待确认公司主体与具体产品。",
+      "deliver": "待核实",
+      "ai": "待核实",
+      "human": "待核实",
+      "data": "待核实",
+      "pricing": "待核实",
+      "boundary": "不把名称或行业印象写成已确认能力。",
+      "insight": "先取得可靠公开资料和产品演示，再进入能力判断。",
+      "verify": "法律主体、产品名称、目标人群、客户、交付、报价与来源。",
+      "refs": [
+        "lead"
+      ],
+      "priority": "待核实",
+      "region": "中国",
+      "evidence": "待核实"
+    }
+  ]
+}</script><script>'use strict';
+const DATA=JSON.parse(document.getElementById('research-data').textContent);
+const P=DATA.products,S=DATA.sources;
+const L={clinical:{name:'诊疗路径',desc:'减少信息整理与诊疗准备负担',color:'#526b88',icon:'clinical'},patient:{name:'患者管理',desc:'让院外问题得到持续响应',color:'#76647d',icon:'patient'},research:{name:'临床研究',desc:'从科学问题到可信研究交付',color:'#37665a',icon:'research'},market:{name:'市场洞察',desc:'为药企市场部提供患者流与研究',color:'#b75b3f',icon:'market'}};
+const N={overview:['创始人决策总览','compass'],map:['产品与行业地图','map'],journey:['医生工作路径','clinical'],payment:['支付与商业化','wallet'],strategy:['数智研进入判断','compass'],pilot:['试点与团队决策','check'],sources:['证据与来源','book']};
+const paths={map:'M3 4h7v7H3z M14 4h7v7h-7z M3 15h7v6H3z M14 15h7v6h-7z',clinical:'M9 3h6v6h6v6h-6v6H9v-6H3V9h6z',patient:'M20.5 5.5c-2-2.5-6-2-8.5 1-2.5-3-6.5-3.5-8.5-1C-.5 10 6 15 12 21c6-6 12.5-11 8.5-15.5z',research:'M9 3h6 M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4a1.5 1.5 0 0 0 1.3-2L14 9V3 M7 15h10',market:'M4 20V9 M10 20V4 M16 20v-7 M22 20H2',wallet:'M3 6h17v15H3z M3 6V3h14v3 M15 11h6v5h-6z',compass:'M12 2a10 10 0 1 0 .01 0 M16 8l-3 5-5 3 3-5z',check:'M8 3H4v18h16V3h-4 M8 2h8v4H8z M8 13l3 3 5-6',book:'M12 5C8 2 4 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-7-2-10 1z M12 5v16',search:'M10 3a7 7 0 1 0 .01 0 M15 15l6 6',plus:'M12 5v14 M5 12h14',tick:'M5 12l4 4L19 6',close:'M5 5l14 14 M19 5L5 19',download:'M12 3v12 M7 10l5 5 5-5 M4 17v4h16v-4',print:'M6 8V3h12v5 M6 17H3V8h18v9h-3 M6 13h12v8H6z',list:'M7 5h14 M7 12h14 M7 19h14 M3 5h.1 M3 12h.1 M3 19h.1',menu:'M3 5h18 M3 12h18 M3 19h18',link:'M14 3h7v7 M21 3L10 14 M10 5H3v16h16v-7',back:'M10 5l-7 7 7 7 M3 12h18',spark:'M12 2v20 M2 12h20 M5 5l14 14 M19 5L5 19'};
+const I=n=>`<svg aria-hidden="true" viewBox="0 0 24 24"><path d="${paths[n]||paths.map}"></path></svg>`;
+const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const KEY='aidm-kol-map-20261111-v1';
+let saved={};try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch{}
+let st={page:'overview',lane:'all',who:'all',payer:'all',kind:'all',q:'',view:'map',selected:[],journey:'clinical',step:0,pay:'market',pilot:'market',checks:{},notes:{},numbers:{revenue:0,labor:0,external:0,sales:0},...saved};
+st.selected=Array.isArray(st.selected)?st.selected.filter(id=>P.some(p=>p.id===id)).slice(0,4):[];
+st.checks=st.checks&&typeof st.checks==='object'?st.checks:{};st.notes=st.notes&&typeof st.notes==='object'?st.notes:{};
+let activeProduct=null,sourceBack=null,toastTimer;
+const $=id=>document.getElementById(id);
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch{}};
+function toast(s){$('toast').textContent=s;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,3300)}
+function hashRead(){const h=location.hash.slice(1).split('?');st.page=N[h[0]]?h[0]:'map';const q=new URLSearchParams(h[1]||'');if(h[1]!==undefined){for(const k of ['lane','who','payer','kind','q','view'])st[k]=q.get(k)||(k==='q'?'':k==='view'?'map':'all')}activeProduct=q.get('product');if(!L[st.lane])st.lane='all';if(!['map','list'].includes(st.view))st.view='map'}
+function syncURL(push=false){const q=new URLSearchParams();for(const k of ['lane','who','payer','kind','q','view'])if(st[k]&&st[k]!=='all'&&!(k==='view'&&st[k]==='map'))q.set(k,st[k]);if(activeProduct)q.set('product',activeProduct);const h='#'+st.page+(q.size?'?'+q.toString():'');if(location.hash!==h)history[push?'pushState':'replaceState'](null,'',location.href.split('#')[0]+h);persist()}
+function menuSync(){const open=$('sidebar').classList.contains('open');$('sidebar').inert=window.innerWidth<=800&&!open;document.querySelector('[data-menu]').setAttribute('aria-expanded',String(open))}
+function nav(page){st.page=page;activeProduct=null;closeDialogs();syncURL(true);render();window.scrollTo({top:0,behavior:'instant'});$('sidebar').classList.remove('open');$('scrim').classList.remove('open');menuSync();$('page-title')?.focus({preventScroll:true})}
+function closeDialogs(){for(const d of document.querySelectorAll('dialog[open]'))d.close()}
+function head(title,desc,tag='创始人决策工作台'){return `<header class="page-head"><div><h1 id="page-title" tabindex="-1">${title}</h1><p>${desc}</p></div><span class="page-tag">${tag}</span></header>`}
+function pill(p){return `<span class="pill ${p.kind==='拟开发'?'proposal':p.evidence==='待核实'?'pending':p.evidence==='公开定位'?'verified':''}">${E(p.kind==='拟开发'?'拟开发':p.evidence)}</span>`}
+function selectButton(p){return `<button class="select-product" data-toggle="${p.id}" aria-pressed="${st.selected.includes(p.id)}" aria-label="${st.selected.includes(p.id)?'移出':'加入'}对比：${E(p.brand+' '+p.name)}">${I(st.selected.includes(p.id)?'tick':'plus')}</button>`}
+function card(p){return `<article class="product-card ${p.kind==='拟开发'?'proposal':''} ${st.selected.includes(p.id)?'selected':''}" data-card="${p.id}"><div class="card-top"><span class="brandname">${E(p.brand)}</span>${p.region==='国际'?'<span class="small">国际</span>':''}${selectButton(p)}</div><button class="product-title" data-detail="${p.id}">${E(p.name)}</button><p>${E(p.summary)}</p><div class="card-meta">${p.users.map(u=>`<span class="pill">${E(u)}</span>`).join('')}</div><div class="card-bottom">${pill(p)}<button class="detail-link" data-detail="${p.id}">查看分析</button></div></article>`}
+function filtered(){const q=st.q.trim().toLowerCase();return P.filter(p=>(st.lane==='all'||p.lane===st.lane)&&(st.who==='all'||p.users.includes(st.who))&&(st.payer==='all'||p.payers.includes(st.payer))&&(st.kind==='all'||p.kind===st.kind)&&(!q||[p.name,p.brand,p.summary,p.deliver,p.payers.join(' '),p.ai].join(' ').toLowerCase().includes(q)))}
+function option(v,selected,label){return `<option value="${E(v)}" ${v===selected?'selected':''}>${E(label||v)}</option>`}
+function sourceChips(ids=[]){return ids.map(id=>{const s=S.find(x=>x.id===id);return s?`<button class="evidence-tag" data-source="${id}">${E(s.title.split(' · ')[0])}</button>`:''}).join('')}
+const EXEC_SIGNALS=[
+  {label:'临床需求',status:'问题存在 · 付费尚未证实',text:'医生端最清晰的需求集中在资料整理、随访协调、科研执行与证据准备；“愿意使用”不能直接换算为订单。',refs:['nhc-stat','adoption','trialgpt','capri']},
+  {label:'商业闭环',status:'先看项目制B端',text:'PI科研执行、药企市场研究和医学证据更容易把问题绑定到预算、范围、验收和付款；患者管理还要承担触达与实际响应。',refs:['procurement-1','procurement-2','company','nsfc']},
+  {label:'数智研优势',status:'有起点 · 无独占性',text:'数据治理、研究设计和KOL解释可以形成组合优势，但需要用同一项目的质量、工时、报价、回款和复购证明。',refs:['company','policy','ethics','ai-reg']}
+];
+const MARKET_MODULES=[
+  {name:'PI科研执行',fit:'近期最值得验证',status:'需求与付款边界较清楚',payer:'PI科研经费 / 医院科研预算',loop:'课题任务 → 固定范围交付 → PI/机构验收 → 付款',risk:'PI已有团队或供应商；采购科目与预算必须逐项确认。',refs:['company','nsfc','procurement-1']},
+  {name:'药企医学部 / RWE',fit:'中高潜力 · 方法门槛高',status:'可从Evidence plan或可行性切入',payer:'药企医学 / RWE预算',loop:'证据缺口 → 可行性 → 研究交付 → 改变后续决策',risk:'数据授权、终点可测量性和研究周期可能让闭环变长。',refs:['iqvia','flatiron','ethics','privacy']},
+  {name:'药企市场部研究',fit:'中高潜力 · 竞争更强',status:'患者流与路径洞察可独立售卖',payer:'药企市场部',loop:'品牌决策 → 患者流/访谈 → 洞察报告 → 资源配置',risk:'IQVIA、Ipsos等已有成熟方法、数据和客户关系；换供应商理由必须具体。',refs:['iqvia-market','ipsos']},
+  {name:'院内临床工作流',fit:'中等潜力 · 交付与集成重',status:'医生痛点明显，采购链更长',payer:'医院预算 / 科室项目',loop:'科室任务 → 院内试点 → 质量与净省时 → 扩科采购',risk:'系统接入、信息安全、临床责任与院内采购都可能成为硬约束。',refs:['policy','procurement-2','synyi','yidu']},
+  {name:'患者管理与支持',fit:'需求大 · 商业闭环最不确定',status:'必须把服务响应纳入产品',payer:'药企患者支持 / 医院 / 商保',loop:'招募触达 → 结构化随访 → 风险转交 → 质量与成本评估',risk:'没有真实医护响应时，AI提醒本身不足以形成临床价值或续费。',refs:['canopy','capri','ethics','privacy','linkdoc']}
+];
+function overviewPage(){return head('是否值得组建临床医生端业务团队？','面向数智研创始人的决策首页：先判断需求是否真实、谁会付费、数智研凭什么赢，再决定是组建验证小队还是投入完整业务团队。','创始人决策总览')+`<section class="exec-hero"><span class="exec-badge">● 当前建议 · 投资验证，不直接扩张</span><h2>可以进入，但先组建“验证型小队”</h2><p>证据支持临床医生端存在可服务的高价值任务，尤其是PI科研执行、药企医学/RWE和市场研究；证据还不足以支持直接建设全国患者服务网络、全面诊疗平台或以医生个人订阅为核心的业务。</p><div class="action-strip"><p><span class="source-confidence">决策置信度：中等</span> · 需要用真实报价、交付、回款和复购把“需求”推进到“商业闭环”。</p><button class="btn primary" data-nav="pilot">进入90天试点</button></div></section><div class="decision-gate"><div><strong>先回答：医生究竟缺什么？</strong><p>用具体任务、发生频率、现有替代方案和净省时描述，不用“AI很需要”替代需求。</p></div><div><strong>再回答：谁拿预算？</strong><p>把医生使用者、KOL、预算负责人和付款机构拆开；接纳度不是付费率。</p></div><div><strong>最后回答：数智研凭什么赢？</strong><p>优势必须同时体现在数据可用、专业交付、AI增量和商业可重复四项材料上。</p></div></div><section><h2>三条核心信号</h2><div class="signal-grid">${EXEC_SIGNALS.map(x=>`<article class="signal-card"><span class="signal-status">${x.status}</span><h3>${x.label}</h3><p>${x.text}</p><div>${sourceChips(x.refs)}</div></article>`).join('')}</div></section><section class="section-gap"><h2>五个模块的市场潜力，不是同一条赛道</h2><p class="muted small">潜力按“需求强度 × 预算可达性 × 交付可控性 × 竞争/责任风险”判断；不是行业规模排名，也不是收入预测。</p><div class="signal-grid">${MARKET_MODULES.map(x=>`<article class="signal-card"><span class="signal-status">${x.fit}</span><h3>${x.name}</h3><p><strong>购买者：</strong>${x.payer}<br><strong>闭环：</strong>${x.loop}<br><strong>限制：</strong>${x.risk}</p><div>${sourceChips(x.refs)}</div></article>`).join('')}</div></section><section class="detail-panel section-gap"><h2>最可能推翻当前建议的证据</h2><div class="journey-grid"><section><h3>需求被高估</h3><p>连续访谈中，医生都表示痛点存在，但无法指出具体任务、频率、现有替代方案或愿意让组织承担的预算。</p></section><section><h3>闭环无法成立</h3><p>只能获得免费试用或专家背书，预算负责人不出现，采购/付款路径反复变化，或项目毛利在正常报价下持续为负。</p></section><section><h3>优势不可重复</h3><p>每个项目都依赖创始人或单个KOL手工救火，数据授权和质量无法复制，AI节省的只是局部操作而不是总工时。</p></section><section><h3>更优替代方案出现</h3><p>客户更愿意购买成熟平台、院内团队或现有供应商，且数智研不能证明更快、更准、更便宜或更适配。</p></section></div><div class="action-strip"><p>下一步只需要验证三个东西：一笔真实订单、一次可复现交付、一个可解释的后续购买理由。</p><button class="btn accent" data-nav="strategy">查看完整进入判断</button></div></section>`}
+function mapPage(){return head('KOL业务机会地图','沿着医生任务寻找产品，再核对付款方、竞品与交付条件。药企市场部的患者流研究，与医学部的证据服务独立呈现。')+`<div class="intro-bar"><div><strong>先验证研究与洞察服务，再决定组织投入</strong><p>初步建议：比较PI科研执行、药企市场研究和医学证据三条收入路径；患者管理需先落实预算、触达与医护响应。</p></div><button class="btn" data-nav="strategy">查看进入判断 ${I('compass')}</button></div><div class="tabbar" role="group" aria-label="产品场景"><button class="tab ${st.lane==='all'?'active':''}" data-lane="all">全部场景</button>${Object.entries(L).map(([id,l])=>`<button class="tab ${id==='market'?'market':''} ${st.lane===id?'active':''}" data-lane="${id}">${l.name}</button>`).join('')}</div><div class="filters"><div class="field searchfield"><label for="map-search">搜索产品、公司或需求</label><div class="searchwrap">${I('search')}<input id="map-search" placeholder="试试：患者流、Evidence plan、零氪" value="${E(st.q)}" autocomplete="off"></div></div><div class="field"><label for="filter-who">服务对象</label><select id="filter-who" data-filter="who">${option('all',st.who,'全部对象')}${['医生','患者','药企/机构'].map(v=>option(v,st.who)).join('')}</select></div><div class="field"><label for="filter-payer">付款路径</label><select id="filter-payer" data-filter="payer">${option('all',st.payer,'全部付款方')}${['药企市场部','药企医学/RWE','PI科研经费','药企患者支持','医院预算','商保','患者家庭','待核实'].map(v=>option(v,st.payer)).join('')}</select></div><div class="field"><label for="filter-kind">条目类型</label><select id="filter-kind" data-filter="kind">${option('all',st.kind,'全部类型')}${['拟开发','外部产品','对标线索'].map(v=>option(v,st.kind)).join('')}</select></div><button class="resetbtn" data-reset>重置</button></div><div class="resultbar"><div id="result-count" aria-live="polite"></div><div class="view-toggle"><button class="${st.view==='map'?'active':''}" data-view="map" aria-pressed="${st.view==='map'}">${I('map')}地图</button><button class="${st.view==='list'?'active':''}" data-view="list" aria-pressed="${st.view==='list'}">${I('list')}清单</button></div></div><div id="map-results"></div><p class="footnote">比较单位是具体产品或服务。同一公司可出现多个条目；这是代表性对标样本，不是完整市场名录。付款路径包含待验证的适配判断，详情逐项说明。<button class="detail-link" data-nav="sources">查看来源与证据口径</button></p>`}
+function mapResults(){if(!$('map-results'))return;const a=filtered();$('result-count').innerHTML=`显示 <b>${a.length}</b> / ${P.length} 条 <span class="count-note">其中 ${a.filter(p=>p.kind==='拟开发').length} 项拟开发服务 · 可选择最多4项对比</span>`;if(!a.length){$('map-results').innerHTML='<div class="empty"><h3>没有符合条件的条目</h3><p>尝试缩短关键词，或放宽服务对象和付款方。</p><button class="btn" data-reset>清除筛选</button></div>';return}if(st.view==='list'){$('map-results').innerHTML=`<div class="table-wrap"><table class="data-table"><thead><tr><th>对比</th><th>公司 / 产品</th><th>场景</th><th>服务对象</th><th>付款路径（待逐项确认）</th><th>信息状态</th></tr></thead><tbody>${a.map(p=>`<tr data-card="${p.id}"><td>${selectButton(p)}</td><td><small class="muted">${E(p.brand)}</small><button class="product-title" data-detail="${p.id}">${E(p.name)}</button></td><td>${L[p.lane].name}</td><td>${E(p.users.join('、'))}</td><td>${E(p.payers.join('、'))}</td><td>${pill(p)}</td></tr>`).join('')}</tbody></table></div>`}else{$('map-results').innerHTML=`<div class="map-board ${st.lane!=='all'?'single':''}">${Object.entries(L).filter(([id])=>a.some(p=>p.lane===id)).map(([id,l])=>`<section class="lane" style="--lane-color:${l.color}"><div class="lane-heading"><h2>${I(l.icon)}${l.name}<span class="lane-count">${a.filter(p=>p.lane===id).length}</span></h2><small>${l.desc}</small></div><div class="lane-cards">${a.filter(p=>p.lane===id).map(card).join('')}</div></section>`).join('')}</div>`}}
+function toggle(id){if(st.selected.includes(id))st.selected=st.selected.filter(x=>x!==id);else if(st.selected.length===4){toast('最多并排比较4项，请先移除一项。');return}else st.selected.push(id);persist();mapResults();tray();if($('compare').open){if(st.selected.length<2){$('compare').close();toast('至少保留2项才能并排比较。')}else compareContent()}}
+function tray(){const a=st.selected.map(id=>P.find(p=>p.id===id)).filter(Boolean);$('compare-tray').hidden=!a.length;$('compare-tray').innerHTML=`${I('list')}<p>已选 ${a.length} / 4 <span class="tray-names">${a.map(p=>E(p.brand+' · '+p.name)).join('，')}</span></p><button class="btn" data-clear-compare><span class="clear-label">清空</span>${I('close')}</button><button class="btn primary" data-compare ${a.length<2?'disabled':''}>并排对比${a.length>=2?' ('+a.length+')':''}</button>`}
+function detailBlock(title,value,focus=false){return `<section class="detail-block ${focus?'focus':''}"><h3>${title}</h3><p>${E(value)}</p></section>`}
+function showDetail(id,record=true){const p=P.find(p=>p.id===id);if(!p)return;activeProduct=id;sourceBack=id;if(record)syncURL();$('drawer-head-label').textContent=L[p.lane].name+' / '+p.brand;$('drawer-body').innerHTML=`${pill(p)}<h2>${E(p.name)}</h2><p class="lead">${E(p.summary)}</p><div class="detail-grid"><div><small>使用者</small>${E(p.users.join('、'))}</div><div><small>付款路径 · 需确认</small>${E(p.payers.join('、'))}</div></div>${detailBlock('实际交付',p.deliver)}${detailBlock('AI承担什么',p.ai)}${detailBlock('谁负责专业工作与处理',p.human)}${detailBlock('数据与落地条件',p.data)}${detailBlock(p.kind==='拟开发'?'拟议计费 / 报价假设':'公开计费信息',p.pricing)}${detailBlock('适用边界与不确定性',p.boundary)}${detailBlock('对数智研的启示 · 分析判断',p.insight,true)}${detailBlock('下一步验证',p.verify)}<div class="link-row"><button class="btn accent" data-toggle="${p.id}">${st.selected.includes(p.id)?'移出对比':'加入对比'}</button><button class="btn" data-share="${p.id}">复制条目定位</button></div><section class="detail-block"><h3>依据与来源</h3>${p.refs.map(id=>`<button class="ref-link" data-source="${id}">${E(S.find(s=>s.id===id)?.title||id)} ${I('link')}</button>`).join('')}</section>`;if(!$('drawer').open)$('drawer').showModal();$('drawer').scrollTop=0}
+function showSource(id){const s=S.find(s=>s.id===id);if(!s)return;$('drawer-head-label').textContent='证据与来源';$('drawer-body').innerHTML=`${sourceBack?`<button class="btn ghost" data-detail="${sourceBack}">${I('back')}返回产品分析</button>`:''}<div style="margin-top:18px"><span class="pill">${E(s.kind)}</span><h2>${E(s.title)}</h2><p class="small muted">资料读取 / 核验日期：${E(s.date)}</p></div>${detailBlock('本页使用范围',s.scope)}${detailBlock('不能据此得出的结论',s.limit,true)}${s.url?`<a class="btn" href="${E(s.url)}" target="_blank" rel="noopener noreferrer">打开原始来源 ${I('link')}</a>`:'<p class="muted small">本地公司材料或待核实线索，未提供公开网页链接。</p>'}`;if(!$('drawer').open)$('drawer').showModal();$('drawer').scrollTop=0}
+function compareContent(){const a=st.selected.map(id=>P.find(p=>p.id===id));const different=new Set(a.map(p=>p.lane)).size>1;const rows=[['业务与购买理由','summary'],['使用者','users'],['付款路径 · 需逐项确认','payers'],['实际交付','deliver'],['AI与专业工作','_group'],['AI承担什么','ai'],['人工 / 临床责任','human'],['数据与实施条件','data'],['商业与进入判断','_group'],['计费 / 报价口径','pricing'],['限制与未知','boundary'],['数智研切入判断','insight'],['下一步验证','verify']];$('compare-body').innerHTML=`<div class="notice">${different?'<strong>当前跨场景比较：</strong>用于理解业务与交付方式，不构成功能或效果排名。':'<strong>当前同场景比较：</strong>拟开发服务与外部公开产品成熟度不同，不能直接认定能力优劣。'} 未取得同题测试与可比报价前，不计算总分。</div><div class="table-wrap"><table class="data-table compare-table"><thead><tr><th>比较维度</th>${a.map(p=>`<th>${pill(p)}<strong style="margin-top:8px">${E(p.brand)}</strong><strong>${E(p.name)}</strong><button class="btn" data-toggle="${p.id}">移除</button></th>`).join('')}</tr></thead><tbody>${rows.map(([label,key])=>key==='_group'?`<tr class="group-row"><td colspan="${a.length+1}">${label}</td></tr>`:`<tr><td>${label}</td>${a.map(p=>`<td>${E(Array.isArray(p[key])?p[key].join('、'):p[key])}</td>`).join('')}</tr>`).join('')}<tr><td>来源</td>${a.map(p=>`<td>${p.refs.map(id=>{const s=S.find(x=>x.id===id);return s.url?`<p><a href="${E(s.url)}" target="_blank" rel="noopener noreferrer">${E(s.title)}</a></p>`:`<p>${E(s.title)}</p>`}).join('')}</td>`).join('')}</tr></tbody></table></div>`}
+function compare(){if(st.selected.length<2)return;compareContent();$('compare').showModal()}
+const J={clinical:[['接诊与资料准备','资料分散，复述与重复整理占用医生时间。','带出处的病史摘要、治疗时间轴、缺失信息清单。','医生核对事实与临床重要性，AI不补造缺失病史。','比较关键遗漏、错误和包含复核后的准备时间。','aidm-mdt'],['检查诊断与分期分型','影像、病理与分子结果需要交叉核对。','结果结构化、一致性检查和待确认事项。','临床医生完成诊断与分期分型，证据出处可回查。','用已审查病例核对错误类型和适用患者范围。','aidm-mdt'],['治疗选择与MDT','患者资料与指南研究之间存在整理和适用性判断负担。','病例讨论材料、证据表及适用人群说明。','专业团队审核证据；不能把材料生成当作已验证治疗推荐。','评估材料质量、准备工时与医生采用情况。','aidm-mdt'],['疗效与复发再评估','长期治疗、反应与不良反应记录难以快速重建。','纵向病程、治疗变化摘要与再讨论材料。','未观察到记录可能是数据缺失，不能自动认定未治疗。','比较时间轴准确性、关键事件遗漏和审查负担。','aidm-mdt']],patient:[['治疗启动','患者不清楚治疗与复查安排，医护重复解释。','经审核教育、个人任务清单与理解确认。','临床团队确认医嘱及内容。','患者理解、任务完成与医护净工时。','aidm-care'],['症状与复查','反馈零散、漏随访，重要信息未及时转交。','结构化采集、摘要、提醒与转交记录。','护士响应，医生决定临床处理；实验室监测按医嘱。','高风险问题有接收与处理记录，工作量可测。','aidm-care'],['医保与DTP','患者不清楚政策、材料、药房库存与结算条件。','适用政策核实、材料清单、有效处方对应购药信息。','医保经办机构处理待遇；药房审方、调配与结算。','核实信息准确，办理状态可追踪；不保证报销或供应。','aidm-access'],['输注与就医支持','外购药能否输注、接收要求、预约和陪诊安排不明确。','核实接收医院要求与可预约服务，追踪实际办理。','接收医院决定是否接收并提供医疗服务，服务商实际履约。','接收条件、成本和失败原因明确；不承诺加号或接收。','aidm-access']],research:[['科学问题与Evidence plan','临床观察尚未转成值得研究、能够回答的问题。','证据缺口、优先级、决策用途与研究路线图。','KOL提出与审查问题，医学统计团队评价设计。','是否存在相反证据，研究完成后会改变什么决策。','aidm-evidence'],['方案与数据可行性','人群、变量、终点、样本和数据来源未衔接。','方案框架、变量清单、可行性与偏倚评估。','PI和方法学人员负责设计；AI只能辅助。','关键终点能否测量，数据授权与质量是否够用。','aidm-evidence'],['数据准备与执行','病历整理、定义统一、质控和追踪耗时。','数据集、字典、溯源、质控与随访记录。','研究人员复核，按照方案管理变更与数据使用。','在相同质量要求下比较总工时、返工和错误。','aidm-pi'],['分析、解释与后续证据','分析难复现，结论与研究问题脱节。','代码、表图、敏感性分析、结果解释与后续问题。','统计与临床团队解释结果，保留不确定性。','结果可复现，不承诺阳性、发表或监管接受。','aidm-evidence']]};
+function journeyPage(){const a=J[st.journey]||J.clinical;st.step=Math.min(Number(st.step)||0,a.length-1);const x=a[st.step];return head('医生工作路径','用具体工作量和专业责任判断AI价值。点击阶段，查看需求、可交付物与验证方法。')+`<div class="tabbar">${['clinical','patient','research'].map(id=>`<button class="tab ${st.journey===id?'active':''}" data-journey="${id}">${L[id].name}</button>`).join('')}</div><div class="journey-steps">${a.map((v,i)=>`<button class="journey-step ${i===st.step?'active':''}" data-step="${i}"><span>阶段 ${i+1}</span>${v[0]}</button>`).join('')}</div><div class="detail-panel"><h2>${x[0]}</h2><div class="journey-grid">${[['医生 / 患者的困难',x[1]],['可交付服务',x[2]],['专业责任与使用边界',x[3]],['价值如何验证',x[4]]].map(([h,p])=>`<section><h3>${h}</h3><p>${p}</p></section>`).join('')}</div><div class="link-row"><button class="btn accent" data-detail="${x[5]}">查看对应拟开发服务</button><button class="btn" data-related="${st.journey}">查看本场景竞品</button></div></div><div class="intro-bar section-gap"><div><strong>同一条患者路径，可以支持两种不同的药企购买理由</strong><p>市场部关注患者分布、路径差异与需求原因；医学部关注研究问题和证据缺口。白皮书是交付形式，分类仍取决于研究目的和方法。</p></div><button class="btn" data-nav="payment">查看两条药企业务</button></div><p class="footnote">本页是产品研究用工作分解，不是临床诊疗指南。具体患者的诊疗和监测由临床团队确定。</p>`}
+const PAY={market:{name:'药企市场部',sub:'患者流、市场研究与白皮书',buy:'支持品牌规划、患者服务设计与资源配置。',user:'市场与品牌团队、研究人员；KOL参与临床解释。',product:'患者流地图、治疗模式、患者/医生访谈、疾病领域白皮书。',kol:'解释临床实践、审查访谈与研究框架、参与内容共创。',route:'需求与决策用途确认 → 数据/样本可行性 → 报价与采购 → 分阶段交付与验收。',price:'按固定范围项目收费；验证后再讨论年度更新或专题系列。',accept:'分母与观察期明确，样本局限可解释，结论回答既定市场问题。',risk:'数据库未见治疗不等于真实流失；白皮书不能替代方法与证据。',next:'以一个病种、一段路径、一个品牌决策测试付费意愿。',id:'aidm-flow'},medical:{name:'药企医学 / RWE',sub:'Evidence plan与证据项目',buy:'支持医学、研究和准入决策，补齐重要证据缺口。',user:'医学、RWE、HEOR及相关研究团队。',product:'Evidence plan、可行性、聚焦RWE及约定证据报告。',kol:'提出科学问题、担任研究合作伙伴、审查设计与结果。',route:'证据用途与预算 → 可行性 → 方案与合同 → 研究交付 → 验收。',price:'规划、研究按里程碑收费。此前价格范围仅是报价测试假设。',accept:'数据可溯源、方法适当、结果可复现，并服务约定决策。',risk:'药企付款不单独决定IIT性质；不承诺阳性结果或论文录用。',next:'先成交一个付费规划/有限可行性项目。',id:'aidm-evidence'},pi:{name:'PI科研经费',sub:'获批任务的执行支持',buy:'解决课题中的数据、质控、方法或随访执行缺口。',user:'PI及实际承担执行任务的研究团队。',product:'限定病例和变量的数据、质控、分析模块。',kol:'确认课题任务、安排人员、参与验收；经费由机构管理。',route:'任务与可用预算 → 依托单位审核采购 → 合同 → 交付验收 → 机构付款。',price:'固定范围模块/项目；超出病例、变量、轮次和周期需重新定价。',accept:'真实交付与课题相关，质量和可复现性满足约定。',risk:'获得国自然不等于有可用预算；个人自费订阅是不同路径。',next:'核实任务、余额、科目、采购路径与具体报价接受度。',id:'aidm-pi'},psp:{name:'药企患者支持',sub:'持续服务及实际完成情况',buy:'为确定人群提供可评价的治疗阶段支持。',user:'患者、护士、医生及项目管理团队。',product:'症状采集、复查、漏随访追踪、费用与资源衔接。',kol:'制定临床规则、明确响应及升级职责。',route:'项目预算与服务范围 → 医护/机构协作 → 启动 → 按服务记录验收。',price:'启动费＋有效管理患者月＋明确的人工服务费；避免重复计费。',accept:'任务完成、问题处理及时、医护净工时、患者体验与服务成本。',risk:'付款部门因公司而异；不将联系次数或延长用药直接当作成功。',next:'先落实预算、触达、医护响应和药物警戒职责。',id:'aidm-care'},hospital:{name:'医院自身预算',sub:'科室工具与流程能力',buy:'改善科研效率、信息质量或患者管理流程。',user:'科室、科研处、护理、信息及管理团队。',product:'科研数据工具、MDT准备、科室患者管理。',kol:'院内需求发起人和使用方代表。',route:'科室需求 → 预算负责人 → 技术评估 → 采购 → 实施与验收。',price:'实施、软件使用/维护及约定服务费用。',accept:'真实使用、净工时、数据/服务质量、集成成本。',risk:'采购软件通常不以独立医保编码为前提；医疗收费和医保结算需另行核查。',next:'先验证一个科室，确认预算和流程后讨论扩展。',id:'aidm-mdt'},insurance:{name:'商保及受托服务方',sub:'特定人群管理与评估',buy:'改善服务和健康结果，并研究资源使用与经济效果。',user:'承保人群、服务团队、保险业务与评估团队。',product:'限定人群管理、资源使用与效果评估。',kol:'临床合作与服务规则审查。',route:'承保人群与预算 → 评价设计 → 固定费用试点 → 效果评审。',price:'先验证固定费项目，具备可靠归因后再讨论效果付费。',accept:'健康/服务质量、风险可比性、成本与经济效果。',risk:'医疗支出下降不单独证明患者获益，不能预先保证节省赔付。',next:'仅保留有明确人群、付款方和评估条件的商机。',id:'aidm-access'},patient:{name:'患者 / 家庭自费',sub:'具体就医与照护服务',buy:'解决就医、购药、陪诊和照护中的实际困难。',user:'患者与家庭。',product:'单次或固定周期的可履约支持服务。',kol:'专业规则与必要临床支持。',route:'需求与服务说明 → 报价 → 预约/办理 → 实际履约 → 评价。',price:'单次或周期服务包；明确已由机构覆盖的项目。',accept:'实际完成、价格接受、体验和完整成本。',risk:'不保证号源、报销、供药或治疗结局。',next:'小范围验证付费与履约，暂不作为核心收入假设。',id:'aidm-access'},personal:{name:'医生个人自费',sub:'轻量工具订阅',buy:'提升个人任务效率。',user:'医生本人。',product:'低配置负担的效率工具，具体产品待设计。',kol:'使用者与个人付款者。',route:'试用价值 → 接受价格 → 订阅 → 持续使用。',price:'订阅或按量，价格承受力与支持成本待测。',accept:'持续使用、净省时、付费续期。',risk:'不能把科研经费采购额用作个人订阅支付能力。',next:'暂列低优先级，先确认符合公司交付模式。',id:null}};
+function paymentPage(){const x=PAY[st.pay]||PAY.market;return head('付款理由决定商业模式','把使用者、KOL、预算负责人和实际付款机构分开。药企市场部与医学部是两条独立拓客主线。')+`<div class="dual-business"><button class="business-card" data-pay="market"><h3>药企市场部</h3><p>患者在哪里，路径为何不同，哪些需求值得优先解决？</p><small>患者流 · 市场研究 · 白皮书</small></button><button class="business-card" data-pay="medical"><h3>药企医学部</h3><p>缺什么证据，数据能否回答，下一项研究应做什么？</p><small>Evidence plan · 可行性 · RWE</small></button></div><div class="master-detail"><div class="master-list">${Object.entries(PAY).map(([id,v])=>`<button class="master-item ${st.pay===id?'active':''}" data-pay="${id}"><strong>${v.name}</strong><small>${v.sub}</small></button>`).join('')}</div><article class="detail-panel"><h2>${x.name}</h2><p class="sub">${x.buy}</p><dl class="kv-list">${[['实际使用者',x.user],['购买的交付物',x.product],['KOL的贡献',x.kol],['采购与付款',x.route],['计费方式',x.price],['验收标准',x.accept],['关键边界',x.risk]].map(([k,v])=>`<div class="kv"><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><div class="nextbox"><strong>先验证什么</strong>${x.next}</div>${x.id?`<div class="link-row"><button class="btn" data-detail="${x.id}">查看对应产品</button></div>`:''}</article></div><section class="calc-box"><div class="calc-top"><div><h2>一笔订单能留下多少贡献？</h2><p>填入同一项目、不含税口径的报价与成本。演算示例不代表市场报价或预测。</p></div><button class="btn" data-example>载入演算示例</button></div><div class="calc-inputs">${[['revenue','不含税收入（元）'],['labor','可归属人工成本（元）'],['external','数据、模型、云及合作方（元）'],['sales','商务等分摊成本（元）']].map(([k,v])=>`<div class="field"><label for="num-${k}">${v}</label><input id="num-${k}" data-number="${k}" type="number" min="0" step="100" value="${Number(st.numbers[k])||0}"></div>`).join('')}</div><div id="calc-result" class="calc-result" aria-live="polite"></div><p class="footnote">项目贡献＝收入－可归属人工－数据/模型/云/合作方费用。再扣商务等分摊成本，仍需结合未分摊的持续研发和管理投入判断公司盈亏。应避免重复计入成本。</p></section>`}
+function calc(){if(!$('calc-result'))return;const n=st.numbers;const r=+n.revenue||0,c=r-(+n.labor||0)-(+n.external||0),net=c-(+n.sales||0);$('calc-result').innerHTML=`<div class="${c<0?'negative':''}"><small>项目贡献</small><b>¥ ${c.toLocaleString('zh-CN')}</b></div><div><small>项目贡献率</small><b>${r>0?(c/r*100).toFixed(1)+'%':'—'}</b></div><div class="${net<0?'negative':''}"><small>扣除所填分摊成本后</small><b>¥ ${net.toLocaleString('zh-CN')}</b></div>`}
+const INSIGHTS=[{title:'市场洞察值得单独验证',claim:'患者流与白皮书可以成为市场部购买的研究产品，不能全部归入医学Evidence plan。',support:'IQVIA公开患者画像与路径服务，Ipsos公开医疗研究、定性与咨询服务，说明该购买场景存在。',counter:'这些公司已有方法、数据和客户积累。数智研拥有数据，并不自动证明洞察更好或客户愿意切换。',limit:'白皮书仅是交付形式；不同数据源的患者分母、跨院连接和观察期必须一致。',action:'找一个市场部预算负责人，以一个具体决策、一个病种和一段路径报价；比较客户现有供应商与方法。',refs:['iqvia-market','ipsos']},{title:'科研执行更接近已披露基础',claim:'公司材料中的数据治理、Protocol、SAP与RWE经验，为科研服务提供起点。',support:'数智研此前材料披露相关服务基础；国自然规则允许按真实研究任务及机构规则安排支出。',counter:'PI可能已有成熟团队或供应商；基础机制课题未必需要临床数据服务。项目人工复核也可能较重。',limit:'数据覆盖不等于某病种数据可用，获批课题不等于经费余额与采购落实。',action:'对同一限定任务记录全部工时、返工、验收和付款，优先验证可重复的小模块。',refs:['company','nsfc']},{title:'患者管理的关键是实际响应',claim:'AI采集和提醒要连接医护与服务机构，才可能产生持续服务价值。',support:'Canopy公开产品涉及风险转交和临床流程；CAPRI研究支持数字工具与护士导航的组合价值。',counter:'增加随访问卷可能造成患者退出或医护信息负担；数字组合收益也可能主要来自更多护士投入。',limit:'CAPRI不是生成式AI增量试验。数据更新慢、没有响应团队时，不能承诺实时管理。',action:'在护理规则和资源相近的条件下比较结构化随访与AI辅助随访，记录处理质量与医护净工时。',refs:['canopy','capri']},{title:'KOL认可需要转成组织行动',claim:'愿意讨论是起点，持续使用、投入人员和推进采购才是更强的商业信号。',support:'医护AI接纳调查帮助理解信任与使用问题；不同预算路径有不同的决策与采购主体。',counter:'接纳度高仍可能缺预算；采购周期长也不等于没有需求，需要区分迟缓与真实拒绝。',limit:'不能把问卷接纳、国自然资助或专家背书换算成付费率。',action:'逐次记录实际任务、团队时间、具体报价、预算确认、合同与回款进展。',refs:['adoption','nsfc']}];
+function strategyPage(){return head('进入判断，必须允许被证据推翻','当前建议是投资验证，而不是直接建设全流程平台。以下观点分别列出依据、相反解释和下一步行动。','分析判断 / 待验证')+`<div class="decision-matrix"><div class="decision-cell"><h3 style="color:var(--green)">优先验证</h3><p>PI科研执行<br>药企市场研究<br>药企Evidence plan与聚焦RWE</p><small>首批选1—2个有限项目，共用医学、数据与商务资源。</small></div><div class="decision-cell"><h3 style="color:var(--accent)">有条件开展</h3><p>复杂病例与MDT准备<br>治疗早期患者管理<br>医保、DTP及就医支持</p><small>院内流程、预算、实时信息与实际履约能力先落实。</small></div><div class="decision-cell"><h3>暂缓大规模投入</h3><p>全面诊疗决策平台<br>全国患者服务网络<br>以个人订阅为核心的收入预期</p><small>先补齐数据、服务、使用和支付证据，再决定扩张。</small></div></div><div class="insight-grid">${INSIGHTS.map(x=>`<article class="insight-card"><span class="verdict">${x.claim}</span><h3>${x.title}</h3><details open><summary>依据是什么</summary><p>${x.support}</p></details><details><summary>什么可能推翻判断</summary><p>${x.counter}</p></details><details><summary>适用范围与限制</summary><p>${x.limit}</p></details><details open><summary>下一步验证什么</summary><p>${x.action}</p></details><div class="link-row">${x.refs.map(id=>`<button class="btn ghost" data-source="${id}">${E(S.find(s=>s.id===id).title.split(' · ')[0])}</button>`).join('')}</div></article>`).join('')}</div><section class="detail-panel section-gap"><h2>数智研的优势，要由四类材料证明</h2><dl class="kv-list">${[['数据可用','病例、字段、观察期、来源与授权均落实，关键变量能够测量。'],['专业交付','验收记录、返工、研究质量、实际投入与客户复购。'],['AI增量','在同样质量下，人工复核后仍能节省总工时或提高准确性。'],['商业可重复','正常报价覆盖成本，相似需求能够复用方法、流程和产品。']].map(([k,v])=>`<div class="kv"><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><div class="notice" style="margin:18px 0 0">通用助手和综合平台已有较多竞争。专病服务仍可能有切入口，但“红海 / 蓝海”应按具体任务、客户与可替代方案判断，不能由行业增长预测决定。</div></section>`}
+const PILOT={market:{name:'市场部患者流研究',sub:'验证新增市场部业务',question:'HR阳性、HER2阴性晚期/转移性乳腺癌患者，从确诊到治疗启动的路径有哪些差异？哪些原因需要访谈解释？',deliver:'一个限定人群与观察期的患者流地图、变量与分母说明、访谈解释及白皮书/洞察报告。',accept:'数据解释准确、研究方法透明，回答一个预先约定的市场决策。',boundary:'先核实数据；未观察到后续治疗不直接定义为流失。白皮书形式不改变证据要求。',id:'aidm-flow'},pi:{name:'PI科研执行模块',sub:'验证经费与小项目成交',question:'在既有获批课题内，哪一项数据整理、质控或统计任务值得由数智研承担？',deliver:'固定病例/变量/修改轮次的数据、字典、溯源、代码或分析模块。',accept:'满足质量与课题任务要求，记录复核后工时、验收与机构付款。',boundary:'必须与在研任务及可用预算匹配。具体收费科目和采购方式由机构确认。',id:'aidm-pi'},medical:{name:'医学部证据项目',sub:'验证Evidence plan与RWE',question:'候选：CDK4/6抑制剂联合内分泌治疗启动后前12周，监测、调整和中断路径有哪些证据缺口？',deliver:'先付费规划/可行性；数据可行时再设计约200—300例回顾性研究，规模需重估。',accept:'可追溯地回答研究问题，方法可复现，并有明确后续决策用途。',boundary:'区分计划休药、医嘱调整与自行中断；处方间隔不能直接当作实际服药行为。',id:'aidm-evidence'},patient:{name:'治疗早期患者管理',sub:'验证服务与AI增量',question:'对于新启动上述口服治疗的患者，AI是否在保持服务质量的前提下减少医护净工时？',deliver:'候选1—2中心、60—100人，每人12周；症状、复查、转交及处理记录。规模为建议。',accept:'比较护理资源相近的服务流程；周完成率≥80%为待验证目标，高风险问题有处理记录。',boundary:'预算、触达和医护响应先落实。90天内验证启动条件，每人12周随访另行安排。',id:'aidm-care'}};
+const CHECKS=[['budget','预算与购买理由','预算负责人接受具体问题、范围和报价，采购路径明确。'],['data','数据与研究条件','关键变量、授权、样本与观察期可用。'],['team','专业责任与实际执行','KOL、医学统计、数据或医护服务人员有明确职责与投入。'],['quality','验收与比较基线','定义交付标准、现有流程基线、错误及工时记录。'],['cost','完整成本与后续需求','记录人工、数据、模型、合作方和商务成本，验证续购可能性。']];
+function pilotPage(){const x=PILOT[st.pilot]||PILOT.market;const c=st.checks[st.pilot]||{};const count=CHECKS.filter(([id])=>c[id]).length;return head('用试点决定是否组建团队','先以一个负责人组织医学、数据与商务资源。以真实购买、交付和项目经济性决定长期团队投入。')+`<div class="master-detail"><div class="master-list">${Object.entries(PILOT).map(([id,v])=>`<button class="master-item ${id===st.pilot?'active':''}" data-pilot="${id}"><strong>${v.name}</strong><small>${v.sub}</small></button>`).join('')}</div><article class="detail-panel"><span class="pill proposal">试点方案假设</span><h2 style="margin-top:12px">${x.name}</h2><dl class="kv-list">${[['研究/业务问题',x.question],['拟交付范围',x.deliver],['主要验收',x.accept],['启动边界',x.boundary]].map(([k,v])=>`<div class="kv"><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><div class="link-row"><button class="btn" data-detail="${x.id}">查看产品定义</button><button class="btn" data-export-pilot>导出验证记录</button></div><div class="section-gap"><h3>试点条件自检</h3><p class="muted small">仅保存你在本浏览器填写的状态。这是准备度清单，不是投资评分。</p><div class="progress-line"><div style="width:${count*20}%"></div></div><p id="check-count" class="small muted">已核实 ${count} / 5 项 · ${count===5?'可以组织试点评审，仍需实际订单与质量验证':'关键条件仍需核实'}</p><div class="checklist">${CHECKS.map(([id,h,sub])=>`<label class="check-row"><input type="checkbox" data-check="${id}" ${c[id]?'checked':''}><span><strong>${h}</strong><small>${sub}</small></span></label>`).join('')}</div><label class="small muted" for="pilot-note">验证记录 / 下一步负责人</label><textarea class="note-area" id="pilot-note" placeholder="记录已确认的任务、预算、人员和下一步行动。">${E(st.notes[st.pilot]||'')}</textarea></div></article></div><div class="timeline"><div><strong>第1—30天：需求与可行性</strong><p>访谈具体客户，核查病种数据，形成有预算可能的限定项目。</p></div><div><strong>第31—60天：报价与采购</strong><p>提交固定范围方案，验证价格接受、采购条件和团队投入。</p></div><div><strong>第61—90天：交付与决策</strong><p>交付可完成模块，核对质量、成本、付款和后续需求。</p></div></div><div class="notice section-gap"><strong>扩大投入：</strong>有真实付费、质量达标、正常报价覆盖可归属成本，并有相似需求。<br><strong>调整或停止：</strong>持续只有免费试用、关键数据无法落实、范围失控或交付成本无法覆盖。采购尚在推进时，需区分流程延迟与真实拒绝。</div>`}
+function sourcesPage(){return head('每一项判断，都能追到依据','厂商官网用于核对公开定位，研究用于理解特定效果，公司材料用于描述披露的基础。不同来源不能互相替代。')+`<div class="notice"><strong>本版更新时间：2026年11月12日。</strong> 本轮新增创始人决策总览、临床医生端商业闭环判断和市场潜力分层；前期规则与文献保留原核验日期。海心、若初仍为待核实线索。未取得竞品可比报价，不制作价格或效果排行榜。</div><div class="filters"><div class="field searchfield"><label for="source-search">搜索来源、主题或证据类型</label><div class="searchwrap">${I('search')}<input id="source-search" placeholder="例如：患者流、国自然、厂商官网"></div></div></div><div id="source-results" class="source-list"></div><div class="version-line">版本 1.1 · 2026-11-12<br>公开定位、公司披露、方案假设与待核实线索分别标注。公司已披露能力不等于本页拟开发产品已经上线。本地版本支持离线浏览；打开外部来源需要联网。</div>`}
+function sourceResults(q=''){const a=S.filter(s=>Object.values(s).join(' ').toLowerCase().includes(q.trim().toLowerCase()));$('source-results').innerHTML=a.length?a.map(s=>`<article class="source-card"><span class="pill ${s.kind==='待核实'?'pending':''}">${E(s.kind)}</span><h3 style="margin-top:11px">${E(s.title)}</h3><p>${E(s.scope)}</p><p><strong>边界：</strong>${E(s.limit)}</p><div class="source-bottom"><small>${E(s.date)}</small><button class="detail-link" data-source="${s.id}">查看来源</button></div></article>`).join(''):'<div class="empty"><h3>没有匹配的来源</h3><p>请换一个关键词。</p></div>'}
+function render(){if(!N[st.page])st.page='overview';$('nav').innerHTML=Object.entries(N).map(([id,[name,ico]])=>`<button class="nav-item ${st.page===id?'active':''}" data-nav="${id}" ${st.page===id?'aria-current="page"':''}>${I(ico)}${name}${id==='map'?`<span class="nav-count">${P.length}</span>`:''}</button>`).join('');$('crumb-page').textContent=N[st.page][0];$('main-content').innerHTML=({overview:overviewPage,map:mapPage,journey:journeyPage,payment:paymentPage,strategy:strategyPage,pilot:pilotPage,sources:sourcesPage}[st.page])();$('csv-btn').hidden=st.page!=='map';mapResults();calc();if(st.page==='sources')sourceResults();tray();persist()}
+function download(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function exportCSV(){const cols=[['公司','brand'],['产品','name'],['场景','lane'],['类型','kind'],['服务对象','users'],['付款路径','payers'],['公开信息状态','evidence'],['交付物','deliver'],['AI作用','ai'],['专业责任','human'],['计费口径','pricing'],['边界','boundary'],['来源','refs']];const cell=x=>'"'+String(x??'').replaceAll('"','""')+'"';const rows=filtered().map(p=>cols.map(([h,k])=>cell(k==='lane'?L[p.lane].name:k==='refs'?p.refs.map(id=>{const s=S.find(s=>s.id===id);return s.url||s.title}).join('\n'):Array.isArray(p[k])?p[k].join('、'):p[k])).join(','));download('数智研_当前筛选_'+rows.length+'条.csv','\ufeff'+cols.map(x=>cell(x[0])).join(',')+'\r\n'+rows.join('\r\n'),'text/csv;charset=utf-8');toast('已导出当前筛选的 '+rows.length+' 条记录。')}
+function exportPilot(){const x=PILOT[st.pilot];const c=st.checks[st.pilot]||{};download('数智研_'+x.name+'_验证记录.md','# '+x.name+'\n\n方案为待验证建议。\n\n问题：'+x.question+'\n\n交付：'+x.deliver+'\n\n验收：'+x.accept+'\n\n边界：'+x.boundary+'\n\n## 条件自检\n'+CHECKS.map(([id,h,sub])=>'- ['+(c[id]?'x':' ')+'] '+h+'：'+sub).join('\n')+'\n\n## 验证记录\n'+(st.notes[st.pilot]||'尚未填写')+'\n','text/markdown;charset=utf-8');toast('已导出本项试点验证记录。')}
+async function share(){const link=location.href;try{await navigator.clipboard.writeText(link);toast(location.protocol==='file:'?'已复制本地定位。跨设备分享时请同时发送HTML文件。':'已复制条目链接。')}catch{toast('可直接复制浏览器地址栏中的条目定位。')}}
+function reset(){Object.assign(st,{lane:'all',who:'all',payer:'all',kind:'all',q:''});syncURL();render()}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;if(d.nav){nav(d.nav);return}if(d.lane){st.lane=d.lane;syncURL();render();return}if('reset'in d){reset();return}if(d.view){st.view=d.view;syncURL();render();return}if(d.toggle){toggle(d.toggle);if($('drawer').open&&activeProduct===d.toggle){showDetail(d.toggle,false)}return}if(d.detail){showDetail(d.detail);return}if(d.source){if(!$('drawer').open)sourceBack=null;showSource(d.source);return}if('compare'in d){compare();return}if('clearCompare'in d){st.selected=[];persist();tray();mapResults();return}if(d.close){$(d.close).close();return}if('menu'in d){$('sidebar').classList.toggle('open');$('scrim').classList.toggle('open');menuSync();return}if(d.journey){st.journey=d.journey;st.step=0;render();return}if('step'in d){st.step=Number(d.step);render();return}if(d.related){st.lane=d.related;st.kind='all';st.q='';st.who='all';st.payer='all';nav('map');return}if(d.pay){st.pay=d.pay;render();return}if(d.pilot){st.pilot=d.pilot;render();return}if('example'in d){st.numbers={revenue:45000,labor:18000,external:5000,sales:3000};render();toast('已载入演算示例，数字不代表市场报价。');return}if('exportPilot'in d){exportPilot();return}if('share'in d){share();return}if('export'in d){exportCSV();return}if('print'in d){document.body.classList.toggle('print-dialog',!!document.querySelector('dialog[open]'));window.print();return}});
+document.addEventListener('input',e=>{if(e.target.id==='map-search'){st.q=e.target.value;mapResults();syncURL()}if(e.target.id==='source-search')sourceResults(e.target.value);if(e.target.id==='pilot-note'){st.notes[st.pilot]=e.target.value;persist()}if(e.target.dataset.number){const key=e.target.dataset.number;st.numbers[key]=Math.max(0,Number(e.target.value)||0);calc();persist()}});
+document.addEventListener('change',e=>{if(e.target.dataset.filter){st[e.target.dataset.filter]=e.target.value;mapResults();syncURL()}if(e.target.dataset.check){st.checks[st.pilot]??={};st.checks[st.pilot][e.target.dataset.check]=e.target.checked;persist();const count=CHECKS.filter(([id])=>st.checks[st.pilot][id]).length;$('check-count').textContent=`已核实 ${count} / 5 项 · ${count===5?'可以组织试点评审，仍需实际订单与质量验证':'关键条件仍需核实'}`;document.querySelector('.progress-line>div').style.width=count*20+'%'}});
+$('scrim').addEventListener('click',()=>{$('sidebar').classList.remove('open');$('scrim').classList.remove('open');menuSync()});
+$('drawer').addEventListener('close',()=>{activeProduct=null;sourceBack=null;syncURL()});
+for(const d of document.querySelectorAll('dialog'))d.addEventListener('click',e=>{const r=d.getBoundingClientRect();if(e.target===d&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))d.close()});
+window.addEventListener('afterprint',()=>document.body.classList.remove('print-dialog'));
+window.addEventListener('popstate',()=>{hashRead();const target=activeProduct;render();if(target)showDetail(target,false);else if($('drawer').open)$('drawer').close()});
+window.addEventListener('hashchange',()=>{hashRead();const target=activeProduct;render();if(target)showDetail(target,false)});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(st.page!=='map')nav('map');$('map-search').focus()}});
+for(const el of document.querySelectorAll('[data-icon]'))el.innerHTML=I(el.dataset.icon);
+if(location.hash)hashRead();else st.page='overview';const initialProduct=activeProduct;render();if(initialProduct)showDetail(initialProduct,false);syncURL();
+
+window.addEventListener('resize',menuSync);menuSync();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('sidebar').classList.contains('open')){$('sidebar').classList.remove('open');$('scrim').classList.remove('open');menuSync();document.querySelector('[data-menu]').focus()}});
+</script>
+</body></html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">数智研</title>
+  <desc id="desc">蓝青科技感数据星芒图标</desc>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42e6df"/>
+      <stop offset="1" stop-color="#4ca4ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(32 32) rotate(90) scale(29)">
+      <stop stop-color="#e7ffff" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#8cf7ed" stop-opacity=".12"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#08111f"/>
+  <circle cx="32" cy="32" r="22" fill="url(#bg)" opacity=".18"/>
+  <path d="M32 9v46M9 32h46M16 16l32 32M48 16 16 48" stroke="url(#bg)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <path d="M32 18 36 28l10 4-10 4-4 10-4-10-10-4 10-4 4-10Z" fill="url(#glow)"/>
+  <circle cx="32" cy="32" r="4.5" fill="#f3ffff"/>
+  <circle cx="12" cy="32" r="2.5" fill="#42e6df"/>
+  <circle cx="52" cy="32" r="2.5" fill="#4ca4ff"/>
+  <circle cx="32" cy="12" r="2.5" fill="#42e6df"/>
+  <circle cx="32" cy="52" r="2.5" fill="#4ca4ff"/>
+</svg>
